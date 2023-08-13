@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Basic_0="http:///Basic_0.profile.uml2" xmlns:XMLSchema_0="http:///XMLSchema_0_ysgYgEtXEdqCydWod9T-cg.profile.uml2" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xsi:schemaLocation="http:///Basic_0.profile.uml2 pathmap://UML2_PROFILES/Basic.profile.uml2#__LeIQK86Edih9-GG5afQ0g http:///XMLSchema_0_ysgYgEtXEdqCydWod9T-cg.profile.uml2 pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml2#_ytRNhEtXEdqCydWod9T-cg" xmi:id="_3RzIoEtXEdqhPYJq3sEkGA" name="XSDDataTypes" appliedProfile="_3RzIo0tXEdqhPYJq3sEkGA _3RzIpktXEdqhPYJq3sEkGA">
+  <eAnnotations xmi:id="_3RzIoUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+    <contents xmi:type="Basic_0:Basic__ModelLibrary" xmi:id="_3RzIoktXEdqhPYJq3sEkGA"/>
+  </eAnnotations>
+  <packageImport xmi:type="uml:ProfileApplication" xmi:id="_3RzIo0tXEdqhPYJq3sEkGA">
+    <eAnnotations xmi:id="_3RzIpEtXEdqhPYJq3sEkGA" source="attributes">
+      <details xmi:id="_3RzIpUtXEdqhPYJq3sEkGA" key="version" value="0"/>
+    </eAnnotations>
+    <importedPackage xmi:type="uml:Profile" href="pathmap://UML2_PROFILES/Basic.profile.uml2#_6mFRgK86Edih9-GG5afQ0g"/>
+    <importedProfile href="pathmap://UML2_PROFILES/Basic.profile.uml2#_6mFRgK86Edih9-GG5afQ0g"/>
+  </packageImport>
+  <packageImport xmi:type="uml:ProfileApplication" xmi:id="_3RzIpktXEdqhPYJq3sEkGA">
+    <eAnnotations xmi:id="_3RzIp0tXEdqhPYJq3sEkGA" source="attributes">
+      <details xmi:id="_3RzIqEtXEdqhPYJq3sEkGA" key="version" value="0"/>
+    </eAnnotations>
+    <importedPackage xmi:type="uml:Profile" href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml2#_ytRNgEtXEdqCydWod9T-cg"/>
+    <importedProfile href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml2#_ytRNgEtXEdqCydWod9T-cg"/>
+  </packageImport>
+  <ownedMember xmi:type="uml:Package" xmi:id="_3RzIqUtXEdqhPYJq3sEkGA" name="XMLSchema">
+    <eAnnotations xmi:id="_3RzIqktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+      <contents xmi:type="XMLSchema_0:XMLSchema__Schema" xmi:id="_3RzIq0tXEdqhPYJq3sEkGA" sourceURI="file:/C:/EclipseWorkspaces-3.1/hyperModel_2.0/org.eclipse.xsd/cache/www.w3.org/2001/XMLSchema.xsd" targetNamespace="http://www.w3.org/2001/XMLSchema" targetNamespacePrefix="xs"/>
+    </eAnnotations>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzIrEtXEdqhPYJq3sEkGA" name="anySimpleType">
+      <eAnnotations xmi:id="_3RzIrUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzIrktXEdqhPYJq3sEkGA" id="anySimpleType" sourceURI="MagicXMLSchema.xsd#//anySimpleType;XSDSimpleTypeDefinition=1"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzIr0tXEdqhPYJq3sEkGA" general="_3RzIsEtXEdqhPYJq3sEkGA"/>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzIsEtXEdqhPYJq3sEkGA" name="anyType">
+      <eAnnotations xmi:id="_3RzIsUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzIsktXEdqhPYJq3sEkGA" id="anyType" sourceURI="MagicXMLSchema.xsd#//anyType;XSDSimpleTypeDefinition"/>
+      </eAnnotations>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzIs0tXEdqhPYJq3sEkGA" name="anyURI">
+      <eAnnotations xmi:id="_3RzItEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzItUtXEdqhPYJq3sEkGA" id="anyURI" sourceURI="XMLSchema.xsd#//anyURI;XSDSimpleTypeDefinition=23"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzItktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzIt0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzIuEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzIuUtXEdqhPYJq3sEkGA" id="anyURI.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzIuktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzIu0tXEdqhPYJq3sEkGA" name="base64Binary">
+      <eAnnotations xmi:id="_3RzIvEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzIvUtXEdqhPYJq3sEkGA" id="base64Binary" sourceURI="XMLSchema.xsd#//base64Binary;XSDSimpleTypeDefinition=22"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzIvktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzIv0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzIwEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzIwUtXEdqhPYJq3sEkGA" id="base64Binary.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzIwktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzIw0tXEdqhPYJq3sEkGA" name="boolean">
+      <eAnnotations xmi:id="_3RzIxEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzIxUtXEdqhPYJq3sEkGA" id="boolean" sourceURI="XMLSchema.xsd#//boolean;XSDSimpleTypeDefinition=8"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzIxktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzIx0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzIyEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzIyUtXEdqhPYJq3sEkGA" id="boolean.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzIyktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzIy0tXEdqhPYJq3sEkGA" name="byte">
+      <eAnnotations xmi:id="_3RzIzEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzIzUtXEdqhPYJq3sEkGA" id="byte" sourceURI="XMLSchema.xsd#//byte;XSDSimpleTypeDefinition=44"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzIzktXEdqhPYJq3sEkGA" general="_3RzI10tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzIz0tXEdqhPYJq3sEkGA" name="minInclusive">
+        <eAnnotations xmi:id="_3RzI0EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI0UtXEdqhPYJq3sEkGA" id="byte.minInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI0ktXEdqhPYJq3sEkGA" value="-128"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzI00tXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzI1EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI1UtXEdqhPYJq3sEkGA" id="byte.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI1ktXEdqhPYJq3sEkGA" value="127"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzI10tXEdqhPYJq3sEkGA" name="short">
+      <eAnnotations xmi:id="_3RzI2EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzI2UtXEdqhPYJq3sEkGA" id="short" sourceURI="XMLSchema.xsd#//short;XSDSimpleTypeDefinition=43"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzI2ktXEdqhPYJq3sEkGA" general="_3RzI40tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzI20tXEdqhPYJq3sEkGA" name="minInclusive">
+        <eAnnotations xmi:id="_3RzI3EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI3UtXEdqhPYJq3sEkGA" id="short.minInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI3ktXEdqhPYJq3sEkGA" value="-32768"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzI30tXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzI4EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI4UtXEdqhPYJq3sEkGA" id="short.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI4ktXEdqhPYJq3sEkGA" value="32767"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzI40tXEdqhPYJq3sEkGA" name="int">
+      <eAnnotations xmi:id="_3RzI5EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzI5UtXEdqhPYJq3sEkGA" id="int" sourceURI="XMLSchema.xsd#//int;XSDSimpleTypeDefinition=42"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzI5ktXEdqhPYJq3sEkGA" general="_3RzI70tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzI50tXEdqhPYJq3sEkGA" name="minInclusive">
+        <eAnnotations xmi:id="_3RzI6EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI6UtXEdqhPYJq3sEkGA" id="int.minInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI6ktXEdqhPYJq3sEkGA" value="-2147483648"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzI60tXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzI7EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI7UtXEdqhPYJq3sEkGA" id="int.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI7ktXEdqhPYJq3sEkGA" value="2147483647"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzI70tXEdqhPYJq3sEkGA" name="long">
+      <eAnnotations xmi:id="_3RzI8EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzI8UtXEdqhPYJq3sEkGA" id="long" sourceURI="XMLSchema.xsd#//long;XSDSimpleTypeDefinition=41"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzI8ktXEdqhPYJq3sEkGA" general="_3RzI-0tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzI80tXEdqhPYJq3sEkGA" name="minInclusive">
+        <eAnnotations xmi:id="_3RzI9EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI9UtXEdqhPYJq3sEkGA" id="long.minInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI9ktXEdqhPYJq3sEkGA" value="-9223372036854775808"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzI90tXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzI-EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzI-UtXEdqhPYJq3sEkGA" id="long.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI-ktXEdqhPYJq3sEkGA" value="9223372036854775807"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzI-0tXEdqhPYJq3sEkGA" name="integer">
+      <eAnnotations xmi:id="_3RzI_EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzI_UtXEdqhPYJq3sEkGA" id="integer" sourceURI="XMLSchema.xsd#//integer;XSDSimpleTypeDefinition=38"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzI_ktXEdqhPYJq3sEkGA" general="_3RzJB0tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzI_0tXEdqhPYJq3sEkGA" name="fractionDigits">
+        <eAnnotations xmi:id="_3RzJAEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJAUtXEdqhPYJq3sEkGA" id="integer.fractionDigits"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJAktXEdqhPYJq3sEkGA" value="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzJA0tXEdqhPYJq3sEkGA" name="pattern">
+        <eAnnotations xmi:id="_3RzJBEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJBUtXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJBktXEdqhPYJq3sEkGA" value="[\-+]?[0-9]+"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJB0tXEdqhPYJq3sEkGA" name="decimal">
+      <eAnnotations xmi:id="_3RzJCEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJCUtXEdqhPYJq3sEkGA" id="decimal" sourceURI="XMLSchema.xsd#//decimal;XSDSimpleTypeDefinition=11"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJCktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJC0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJDEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJDUtXEdqhPYJq3sEkGA" id="decimal.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJDktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJD0tXEdqhPYJq3sEkGA" name="date">
+      <eAnnotations xmi:id="_3RzJEEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJEUtXEdqhPYJq3sEkGA" id="date" sourceURI="XMLSchema.xsd#//date;XSDSimpleTypeDefinition=15"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJEktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJE0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJFEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJFUtXEdqhPYJq3sEkGA" id="date.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJFktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJF0tXEdqhPYJq3sEkGA" name="dateTime">
+      <eAnnotations xmi:id="_3RzJGEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJGUtXEdqhPYJq3sEkGA" id="dateTime" sourceURI="XMLSchema.xsd#//dateTime;XSDSimpleTypeDefinition=13"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJGktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJG0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJHEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJHUtXEdqhPYJq3sEkGA" id="dateTime.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJHktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJH0tXEdqhPYJq3sEkGA" name="double">
+      <eAnnotations xmi:id="_3RzJIEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJIUtXEdqhPYJq3sEkGA" id="double" sourceURI="XMLSchema.xsd#//double;XSDSimpleTypeDefinition=10"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJIktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJI0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJJEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJJUtXEdqhPYJq3sEkGA" id="double.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJJktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJJ0tXEdqhPYJq3sEkGA" name="duration">
+      <eAnnotations xmi:id="_3RzJKEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJKUtXEdqhPYJq3sEkGA" id="duration" sourceURI="XMLSchema.xsd#//duration;XSDSimpleTypeDefinition=12"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJKktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJK0tXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJLEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJLUtXEdqhPYJq3sEkGA" id="duration.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJLktXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJL0tXEdqhPYJq3sEkGA" name="ENTITY">
+      <eAnnotations xmi:id="_3RzJMEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJMUtXEdqhPYJq3sEkGA" id="ENTITY" sourceURI="XMLSchema.xsd#//ENTITY;XSDSimpleTypeDefinition=37"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJMktXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJM0tXEdqhPYJq3sEkGA" name="NCName">
+      <eAnnotations xmi:id="_3RzJNEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJNUtXEdqhPYJq3sEkGA" id="NCName" sourceURI="XMLSchema.xsd#//NCName;XSDSimpleTypeDefinition=34"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJNktXEdqhPYJq3sEkGA" general="_3RzJPktXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJN0tXEdqhPYJq3sEkGA" name="pattern">
+        <eAnnotations xmi:id="_3RzJOEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJOUtXEdqhPYJq3sEkGA" id="NCName.pattern"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_3RzJOktXEdqhPYJq3sEkGA">
+          <eAnnotations xmi:id="_3RzJO0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+            <contents xmi:type="XMLSchema_0:XMLSchema__Documentation" xmi:id="_3RzJPEtXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml-names/#NT-NCName"/>
+          </eAnnotations>
+          <body>pattern matches production 4 from the Namespaces in XML spec</body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJPUtXEdqhPYJq3sEkGA" value="[\i-[:]][\c-[:]]*"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJPktXEdqhPYJq3sEkGA" name="Name">
+      <eAnnotations xmi:id="_3RzJP0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJQEtXEdqhPYJq3sEkGA" id="Name" sourceURI="XMLSchema.xsd#//Name;XSDSimpleTypeDefinition=33"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJQUtXEdqhPYJq3sEkGA" general="_3RzJSUtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJQktXEdqhPYJq3sEkGA" name="pattern">
+        <eAnnotations xmi:id="_3RzJQ0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJREtXEdqhPYJq3sEkGA" id="Name.pattern"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_3RzJRUtXEdqhPYJq3sEkGA">
+          <eAnnotations xmi:id="_3RzJRktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+            <contents xmi:type="XMLSchema_0:XMLSchema__Documentation" xmi:id="_3RzJR0tXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml#NT-Name"/>
+          </eAnnotations>
+          <body>pattern matches production 5 from the XML spec</body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJSEtXEdqhPYJq3sEkGA" value="\i\c*"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJSUtXEdqhPYJq3sEkGA" name="token">
+      <eAnnotations xmi:id="_3RzJSktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJS0tXEdqhPYJq3sEkGA" id="token" sourceURI="XMLSchema.xsd#//token;XSDSimpleTypeDefinition=27"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJTEtXEdqhPYJq3sEkGA" general="_3RzJUUtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJTUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJTktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJT0tXEdqhPYJq3sEkGA" id="token.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJUEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJUUtXEdqhPYJq3sEkGA" name="normalizedString">
+      <eAnnotations xmi:id="_3RzJUktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJU0tXEdqhPYJq3sEkGA" id="normalizedString" sourceURI="XMLSchema.xsd#//normalizedString;XSDSimpleTypeDefinition=26"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJVEtXEdqhPYJq3sEkGA" general="_3RzJWUtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJVUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJVktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJV0tXEdqhPYJq3sEkGA" id="normalizedString.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJWEtXEdqhPYJq3sEkGA" value="replace"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJWUtXEdqhPYJq3sEkGA" name="string">
+      <eAnnotations xmi:id="_3RzJWktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJW0tXEdqhPYJq3sEkGA" id="string" sourceURI="XMLSchema.xsd#//string;XSDSimpleTypeDefinition=7"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJXEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJXUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJXktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJX0tXEdqhPYJq3sEkGA" id="string.preserve"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJYEtXEdqhPYJq3sEkGA" value="preserve"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJYUtXEdqhPYJq3sEkGA" name="ENTITIES">
+      <eAnnotations xmi:id="_3RzJYktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__List" xmi:id="_3RzJY0tXEdqhPYJq3sEkGA" id="ENTITIES" sourceURI="XMLSchema.xsd#//ENTITIES;XSDSimpleTypeDefinition=30"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzJZEtXEdqhPYJq3sEkGA" name="itemType" type="_3RzJL0tXEdqhPYJq3sEkGA" aggregation="composite">
+        <eAnnotations xmi:id="_3RzJZUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__ContentType" xmi:id="_3RzJZktXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzJZ0tXEdqhPYJq3sEkGA" value="-1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzJaEtXEdqhPYJq3sEkGA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzJaUtXEdqhPYJq3sEkGA" name="minLength">
+        <eAnnotations xmi:id="_3RzJaktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJa0tXEdqhPYJq3sEkGA" id="ENTITIES.minLength"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJbEtXEdqhPYJq3sEkGA" value="1"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJbUtXEdqhPYJq3sEkGA" name="float">
+      <eAnnotations xmi:id="_3RzJbktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJb0tXEdqhPYJq3sEkGA" id="float" sourceURI="XMLSchema.xsd#//float;XSDSimpleTypeDefinition=9"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJcEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJcUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJcktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJc0tXEdqhPYJq3sEkGA" id="float.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJdEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJdUtXEdqhPYJq3sEkGA" name="gDay">
+      <eAnnotations xmi:id="_3RzJdktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJd0tXEdqhPYJq3sEkGA" id="gDay" sourceURI="XMLSchema.xsd#//gDay;XSDSimpleTypeDefinition=19"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJeEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJeUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJektXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJe0tXEdqhPYJq3sEkGA" id="gDay.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJfEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJfUtXEdqhPYJq3sEkGA" name="gMonth">
+      <eAnnotations xmi:id="_3RzJfktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJf0tXEdqhPYJq3sEkGA" id="gMonth" sourceURI="XMLSchema.xsd#//gMonth;XSDSimpleTypeDefinition=20"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJgEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJgUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJgktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJg0tXEdqhPYJq3sEkGA" id="gMonth.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJhEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJhUtXEdqhPYJq3sEkGA" name="gMonthDay">
+      <eAnnotations xmi:id="_3RzJhktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJh0tXEdqhPYJq3sEkGA" id="gMonthDay" sourceURI="XMLSchema.xsd#//gMonthDay;XSDSimpleTypeDefinition=18"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJiEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJiUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJiktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJi0tXEdqhPYJq3sEkGA" id="gMonthDay.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJjEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJjUtXEdqhPYJq3sEkGA" name="gYearMonth">
+      <eAnnotations xmi:id="_3RzJjktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJj0tXEdqhPYJq3sEkGA" id="gYearMonth" sourceURI="XMLSchema.xsd#//gYearMonth;XSDSimpleTypeDefinition=16"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJkEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJkUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJkktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJk0tXEdqhPYJq3sEkGA" id="gYearMonth.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJlEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJlUtXEdqhPYJq3sEkGA" name="gYear">
+      <eAnnotations xmi:id="_3RzJlktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJl0tXEdqhPYJq3sEkGA" id="gYear" sourceURI="XMLSchema.xsd#//gYear;XSDSimpleTypeDefinition=17"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJmEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJmUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJmktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJm0tXEdqhPYJq3sEkGA" id="gYear.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJnEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJnUtXEdqhPYJq3sEkGA" name="hexBinary">
+      <eAnnotations xmi:id="_3RzJnktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJn0tXEdqhPYJq3sEkGA" id="hexBinary" sourceURI="XMLSchema.xsd#//hexBinary;XSDSimpleTypeDefinition=21"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJoEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJoUtXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJoktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJo0tXEdqhPYJq3sEkGA" id="hexBinary.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJpEtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJpUtXEdqhPYJq3sEkGA" name="ID">
+      <eAnnotations xmi:id="_3RzJpktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJp0tXEdqhPYJq3sEkGA" id="ID" sourceURI="XMLSchema.xsd#//ID;XSDSimpleTypeDefinition=35"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJqEtXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJqUtXEdqhPYJq3sEkGA" name="IDREF">
+      <eAnnotations xmi:id="_3RzJqktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJq0tXEdqhPYJq3sEkGA" id="IDREF" sourceURI="XMLSchema.xsd#//IDREF;XSDSimpleTypeDefinition=36"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJrEtXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJrUtXEdqhPYJq3sEkGA" name="IDREFS">
+      <eAnnotations xmi:id="_3RzJrktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__List" xmi:id="_3RzJr0tXEdqhPYJq3sEkGA" id="IDREFS" sourceURI="XMLSchema.xsd#//IDREFS;XSDSimpleTypeDefinition=29"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzJsEtXEdqhPYJq3sEkGA" name="itemType" type="_3RzJqUtXEdqhPYJq3sEkGA" aggregation="composite">
+        <eAnnotations xmi:id="_3RzJsUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__ContentType" xmi:id="_3RzJsktXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzJs0tXEdqhPYJq3sEkGA" value="-1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzJtEtXEdqhPYJq3sEkGA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzJtUtXEdqhPYJq3sEkGA" name="minLength">
+        <eAnnotations xmi:id="_3RzJtktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJt0tXEdqhPYJq3sEkGA" id="IDREFS.minLength"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJuEtXEdqhPYJq3sEkGA" value="1"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJuUtXEdqhPYJq3sEkGA" name="language">
+      <eAnnotations xmi:id="_3RzJuktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJu0tXEdqhPYJq3sEkGA" id="language" sourceURI="XMLSchema.xsd#//language;XSDSimpleTypeDefinition=28"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJvEtXEdqhPYJq3sEkGA" general="_3RzJSUtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJvUtXEdqhPYJq3sEkGA" name="pattern">
+        <eAnnotations xmi:id="_3RzJvktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJv0tXEdqhPYJq3sEkGA" id="language.pattern"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_3RzJwEtXEdqhPYJq3sEkGA">
+          <eAnnotations xmi:id="_3RzJwUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+            <contents xmi:type="XMLSchema_0:XMLSchema__Documentation" xmi:id="_3RzJwktXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml#NT-LanguageID"/>
+          </eAnnotations>
+          <body>pattern specifies the content of section 2.12 of XML 1.0e2
+            and RFC 3066 (Revised version of RFC 1766).</body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJw0tXEdqhPYJq3sEkGA" value="[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJxEtXEdqhPYJq3sEkGA" name="negativeInteger">
+      <eAnnotations xmi:id="_3RzJxUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJxktXEdqhPYJq3sEkGA" id="negativeInteger" sourceURI="XMLSchema.xsd#//negativeInteger;XSDSimpleTypeDefinition=40"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJx0tXEdqhPYJq3sEkGA" general="_3RzJzEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJyEtXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzJyUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJyktXEdqhPYJq3sEkGA" id="negativeInteger.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJy0tXEdqhPYJq3sEkGA" value="-1"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJzEtXEdqhPYJq3sEkGA" name="nonPositiveInteger">
+      <eAnnotations xmi:id="_3RzJzUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJzktXEdqhPYJq3sEkGA" id="nonPositiveInteger" sourceURI="XMLSchema.xsd#//nonPositiveInteger;XSDSimpleTypeDefinition=39"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJz0tXEdqhPYJq3sEkGA" general="_3RzI-0tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJ0EtXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzJ0UtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJ0ktXEdqhPYJq3sEkGA" id="nonPositiveInteger.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ00tXEdqhPYJq3sEkGA" value="0"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJ1EtXEdqhPYJq3sEkGA" name="NMTOKEN">
+      <eAnnotations xmi:id="_3RzJ1UtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJ1ktXEdqhPYJq3sEkGA" id="NMTOKEN" sourceURI="XMLSchema.xsd#//NMTOKEN;XSDSimpleTypeDefinition=31"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJ10tXEdqhPYJq3sEkGA" general="_3RzJSUtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJ2EtXEdqhPYJq3sEkGA" name="pattern">
+        <eAnnotations xmi:id="_3RzJ2UtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJ2ktXEdqhPYJq3sEkGA" id="NMTOKEN.pattern"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_3RzJ20tXEdqhPYJq3sEkGA">
+          <eAnnotations xmi:id="_3RzJ3EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+            <contents xmi:type="XMLSchema_0:XMLSchema__Documentation" xmi:id="_3RzJ3UtXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml#NT-Nmtoken"/>
+          </eAnnotations>
+          <body>pattern matches production 7 from the XML spec</body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ3ktXEdqhPYJq3sEkGA" value="\c+"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJ30tXEdqhPYJq3sEkGA" name="NMTOKENS">
+      <eAnnotations xmi:id="_3RzJ4EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__List" xmi:id="_3RzJ4UtXEdqhPYJq3sEkGA" id="NMTOKENS" sourceURI="XMLSchema.xsd#//NMTOKENS;XSDSimpleTypeDefinition=32"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzJ4ktXEdqhPYJq3sEkGA" name="itemType" type="_3RzJ1EtXEdqhPYJq3sEkGA" aggregation="composite">
+        <eAnnotations xmi:id="_3RzJ40tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__ContentType" xmi:id="_3RzJ5EtXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzJ5UtXEdqhPYJq3sEkGA" value="-1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzJ5ktXEdqhPYJq3sEkGA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzJ50tXEdqhPYJq3sEkGA" name="minLength">
+        <eAnnotations xmi:id="_3RzJ6EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJ6UtXEdqhPYJq3sEkGA" id="NMTOKENS.minLength"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ6ktXEdqhPYJq3sEkGA" value="1"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJ60tXEdqhPYJq3sEkGA" name="nonNegativeInteger">
+      <eAnnotations xmi:id="_3RzJ7EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJ7UtXEdqhPYJq3sEkGA" id="nonNegativeInteger" sourceURI="XMLSchema.xsd#//nonNegativeInteger;XSDSimpleTypeDefinition=45"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzJ7ktXEdqhPYJq3sEkGA" general="_3RzI-0tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJ70tXEdqhPYJq3sEkGA" name="minInclusive">
+        <eAnnotations xmi:id="_3RzJ8EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJ8UtXEdqhPYJq3sEkGA" id="nonNegativeInteger.minInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ8ktXEdqhPYJq3sEkGA" value="0"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJ80tXEdqhPYJq3sEkGA" name="NOTATION">
+      <eAnnotations xmi:id="_3RzJ9EtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzJ9UtXEdqhPYJq3sEkGA" id="NOTATION" sourceURI="XMLSchema.xsd#//NOTATION;XSDSimpleTypeDefinition=25"/>
+      </eAnnotations>
+      <ownedComment xmi:id="_3RzJ9ktXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzJ90tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Documentation" xmi:id="_3RzJ-EtXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <body>NOTATION cannot be used directly in a schema; rather a type
+        must be derived from it by specifying at least one enumeration
+        facet whose value is the name of a NOTATION declared in the
+        schema.</body>
+      </ownedComment>
+      <generalization xmi:id="_3RzJ-UtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzJ-ktXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzJ-0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzJ_EtXEdqhPYJq3sEkGA" id="NOTATION.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ_UtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzJ_ktXEdqhPYJq3sEkGA" name="positiveInteger">
+      <eAnnotations xmi:id="_3RzJ_0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKAEtXEdqhPYJq3sEkGA" id="positiveInteger" sourceURI="XMLSchema.xsd#//positiveInteger;XSDSimpleTypeDefinition=50"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKAUtXEdqhPYJq3sEkGA" general="_3RzJ60tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzKAktXEdqhPYJq3sEkGA" name="minInclusive">
+        <eAnnotations xmi:id="_3RzKA0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzKBEtXEdqhPYJq3sEkGA" id="positiveInteger.minInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKBUtXEdqhPYJq3sEkGA" value="1"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzKBktXEdqhPYJq3sEkGA" name="QName">
+      <eAnnotations xmi:id="_3RzKB0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKCEtXEdqhPYJq3sEkGA" id="QName" sourceURI="XMLSchema.xsd#//QName;XSDSimpleTypeDefinition=24"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKCUtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzKCktXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzKC0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzKDEtXEdqhPYJq3sEkGA" id="QName.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKDUtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzKDktXEdqhPYJq3sEkGA" name="time">
+      <eAnnotations xmi:id="_3RzKD0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKEEtXEdqhPYJq3sEkGA" id="time" sourceURI="XMLSchema.xsd#//time;XSDSimpleTypeDefinition=14"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKEUtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzKEktXEdqhPYJq3sEkGA" name="whiteSpace">
+        <eAnnotations xmi:id="_3RzKE0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzKFEtXEdqhPYJq3sEkGA" id="time.whiteSpace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKFUtXEdqhPYJq3sEkGA" value="collapse"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzKFktXEdqhPYJq3sEkGA" name="unsignedByte">
+      <eAnnotations xmi:id="_3RzKF0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKGEtXEdqhPYJq3sEkGA" id="unsignedByte" sourceURI="XMLSchema.xsd#//unsignedByte;XSDSimpleTypeDefinition=49"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKGUtXEdqhPYJq3sEkGA" general="_3RzKHktXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzKGktXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzKG0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzKHEtXEdqhPYJq3sEkGA" id="unsignedByte.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKHUtXEdqhPYJq3sEkGA" value="255"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzKHktXEdqhPYJq3sEkGA" name="unsignedShort">
+      <eAnnotations xmi:id="_3RzKH0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKIEtXEdqhPYJq3sEkGA" id="unsignedShort" sourceURI="XMLSchema.xsd#//unsignedShort;XSDSimpleTypeDefinition=48"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKIUtXEdqhPYJq3sEkGA" general="_3RzKJktXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzKIktXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzKI0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzKJEtXEdqhPYJq3sEkGA" id="unsignedShort.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKJUtXEdqhPYJq3sEkGA" value="65535"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzKJktXEdqhPYJq3sEkGA" name="unsignedInt">
+      <eAnnotations xmi:id="_3RzKJ0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKKEtXEdqhPYJq3sEkGA" id="unsignedInt" sourceURI="XMLSchema.xsd#//unsignedInt;XSDSimpleTypeDefinition=47"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKKUtXEdqhPYJq3sEkGA" general="_3RzKLktXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzKKktXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzKK0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzKLEtXEdqhPYJq3sEkGA" id="unsignedInt.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKLUtXEdqhPYJq3sEkGA" value="4294967295"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:DataType" xmi:id="_3RzKLktXEdqhPYJq3sEkGA" name="unsignedLong">
+      <eAnnotations xmi:id="_3RzKL0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKMEtXEdqhPYJq3sEkGA" id="unsignedLong" sourceURI="XMLSchema.xsd#//unsignedLong;XSDSimpleTypeDefinition=46"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKMUtXEdqhPYJq3sEkGA" general="_3RzJ60tXEdqhPYJq3sEkGA"/>
+      <ownedAttribute xmi:id="_3RzKMktXEdqhPYJq3sEkGA" name="maxInclusive">
+        <eAnnotations xmi:id="_3RzKM0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Facet" xmi:id="_3RzKNEtXEdqhPYJq3sEkGA" id="unsignedLong.maxInclusive"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKNUtXEdqhPYJq3sEkGA" value="18446744073709551615"/>
+      </ownedAttribute>
+    </ownedMember>
+  </ownedMember>
+  <ownedMember xmi:type="uml:Package" xmi:id="_3RzKNktXEdqhPYJq3sEkGA" name="xml">
+    <eAnnotations xmi:id="_3RzKN0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+      <contents xmi:type="XMLSchema_0:XMLSchema__Schema" xmi:id="_3RzKOEtXEdqhPYJq3sEkGA" sourceURI="http://www.w3.org/2004/10/xml.xsd" targetNamespace="http://www.w3.org/XML/1998/namespace"/>
+    </eAnnotations>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKOUtXEdqhPYJq3sEkGA" name="specialAttrs">
+      <eAnnotations xmi:id="_3RzKOktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__AttributeGroup" xmi:id="_3RzKO0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//specialAttrs;XSDAttributeGroupDefinition"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKPEtXEdqhPYJq3sEkGA" name="base" type="_3RzIs0tXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKPUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKPktXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_3RzKP0tXEdqhPYJq3sEkGA">
+          <eAnnotations xmi:id="_3RzKQEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+            <contents xmi:type="XMLSchema_0:XMLSchema__Documentation" xmi:id="_3RzKQUtXEdqhPYJq3sEkGA"/>
+          </eAnnotations>
+          <body>See http://www.w3.org/TR/xmlbase/ for
+                     information about this attribute.</body>
+        </ownedComment>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKQktXEdqhPYJq3sEkGA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKQ0tXEdqhPYJq3sEkGA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzKREtXEdqhPYJq3sEkGA" name="lang" type="_3RzJuUtXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKRUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKRktXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_3RzKR0tXEdqhPYJq3sEkGA">
+          <eAnnotations xmi:id="_3RzKSEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+            <contents xmi:type="XMLSchema_0:XMLSchema__Documentation" xmi:id="_3RzKSUtXEdqhPYJq3sEkGA"/>
+          </eAnnotations>
+          <body>Attempting to install the relevant ISO 2- and 3-letter
+         codes as the enumerated possible values is probably never
+         going to be a realistic possibility.  See
+         RFC 3066 at http://www.ietf.org/rfc/rfc3066.txt and the IANA registry
+         at http://www.iana.org/assignments/lang-tag-apps.htm for
+         further information.</body>
+        </ownedComment>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKSktXEdqhPYJq3sEkGA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKS0tXEdqhPYJq3sEkGA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3RzKTEtXEdqhPYJq3sEkGA" name="space" type="_3RzKUUtXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKTUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKTktXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKT0tXEdqhPYJq3sEkGA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKUEtXEdqhPYJq3sEkGA"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Enumeration" xmi:id="_3RzKUUtXEdqhPYJq3sEkGA" name="space" packageableElement_visibility="private">
+      <eAnnotations xmi:id="_3RzKUktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__SimpleType" xmi:id="_3RzKU0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//space;XSDAttributeDeclaration=1/XSDSimpleTypeDefinition"/>
+      </eAnnotations>
+      <generalization xmi:id="_3RzKVEtXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+      <ownedLiteral xmi:id="_3RzKVUtXEdqhPYJq3sEkGA" name="default"/>
+      <ownedLiteral xmi:id="_3RzKVktXEdqhPYJq3sEkGA" name="preserve"/>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKV0tXEdqhPYJq3sEkGA" name="base">
+      <eAnnotations xmi:id="_3RzKWEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKWUtXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//base;XSDAttributeDeclaration=2"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKWktXEdqhPYJq3sEkGA" name="base" type="_3RzIs0tXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKW0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKXEtXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKXUtXEdqhPYJq3sEkGA" name="id">
+      <eAnnotations xmi:id="_3RzKXktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKX0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//id;XSDAttributeDeclaration=3"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKYEtXEdqhPYJq3sEkGA" name="id" type="_3RzJpUtXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKYUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKYktXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKY0tXEdqhPYJq3sEkGA" name="lang">
+      <eAnnotations xmi:id="_3RzKZEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKZUtXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//lang;XSDAttributeDeclaration"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKZktXEdqhPYJq3sEkGA" name="lang" type="_3RzJuUtXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKZ0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKaEtXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKaUtXEdqhPYJq3sEkGA" name="space">
+      <eAnnotations xmi:id="_3RzKaktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKa0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//space;XSDAttributeDeclaration=1"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKbEtXEdqhPYJq3sEkGA" name="space" type="_3RzKUUtXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKbUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKbktXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+    </ownedMember>
+  </ownedMember>
+  <ownedMember xmi:type="uml:Package" xmi:id="_3RzKb0tXEdqhPYJq3sEkGA" name="XMLSchema-instance">
+    <eAnnotations xmi:id="_3RzKcEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+      <contents xmi:type="XMLSchema_0:XMLSchema__Schema" xmi:id="_3RzKcUtXEdqhPYJq3sEkGA" sourceURI="file:/C:/EclipseWorkspaces-3.1/hyperModel_2.0/org.eclipse.xsd/cache/www.w3.org/2001/XMLSchema-instance.xsd" targetNamespace="http://www.w3.org/2001/XMLSchema-instance"/>
+    </eAnnotations>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKcktXEdqhPYJq3sEkGA" name="nil">
+      <eAnnotations xmi:id="_3RzKc0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKdEtXEdqhPYJq3sEkGA" id="nil" sourceURI="XMLSchema-instance.xsd#//nil;XSDAttributeDeclaration=1"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKdUtXEdqhPYJq3sEkGA" name="nil" type="_3RzIw0tXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKdktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKd0tXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKeEtXEdqhPYJq3sEkGA" name="noNamespaceSchemaLocation">
+      <eAnnotations xmi:id="_3RzKeUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKektXEdqhPYJq3sEkGA" id="noNamespaceSchemaLocation" sourceURI="XMLSchema-instance.xsd#//noNamespaceSchemaLocation;XSDAttributeDeclaration=3"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKe0tXEdqhPYJq3sEkGA" name="noNamespaceSchemaLocation" type="_3RzIs0tXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKfEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKfUtXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKfktXEdqhPYJq3sEkGA" name="schemaLocation">
+      <eAnnotations xmi:id="_3RzKf0tXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKgEtXEdqhPYJq3sEkGA" id="schemaLocation" sourceURI="XMLSchema-instance.xsd#//schemaLocation;XSDAttributeDeclaration=2"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKgUtXEdqhPYJq3sEkGA" name="schemaLocation" type="_3RzKhEtXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKgktXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKg0tXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_3RzKhEtXEdqhPYJq3sEkGA" name="schemaLocation" packageableElement_visibility="private">
+        <eAnnotations xmi:id="_3RzKhUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__List" xmi:id="_3RzKhktXEdqhPYJq3sEkGA" sourceURI="XMLSchema-instance.xsd#//schemaLocation;XSDAttributeDeclaration=2/XSDSimpleTypeDefinition"/>
+        </eAnnotations>
+        <ownedAttribute xmi:id="_3RzKh0tXEdqhPYJq3sEkGA" name="itemType" type="_3RzIs0tXEdqhPYJq3sEkGA" aggregation="composite">
+          <eAnnotations xmi:id="_3RzKiEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+            <contents xmi:type="XMLSchema_0:XMLSchema__ContentType" xmi:id="_3RzKiUtXEdqhPYJq3sEkGA"/>
+          </eAnnotations>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKiktXEdqhPYJq3sEkGA" value="-1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKi0tXEdqhPYJq3sEkGA"/>
+        </ownedAttribute>
+      </nestedClassifier>
+    </ownedMember>
+    <ownedMember xmi:type="uml:Class" xmi:id="_3RzKjEtXEdqhPYJq3sEkGA" name="type">
+      <eAnnotations xmi:id="_3RzKjUtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+        <contents xmi:type="XMLSchema_0:XMLSchema__GlobalProperty" xmi:id="_3RzKjktXEdqhPYJq3sEkGA" id="type" sourceURI="XMLSchema-instance.xsd#//type;XSDAttributeDeclaration"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_3RzKj0tXEdqhPYJq3sEkGA" name="type" type="_3RzKBktXEdqhPYJq3sEkGA">
+        <eAnnotations xmi:id="_3RzKkEtXEdqhPYJq3sEkGA" source="appliedStereotypes">
+          <contents xmi:type="XMLSchema_0:XMLSchema__Attribute" xmi:id="_3RzKkUtXEdqhPYJq3sEkGA"/>
+        </eAnnotations>
+      </ownedAttribute>
+    </ownedMember>
+  </ownedMember>
+</uml:Model>

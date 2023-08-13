@@ -1,0 +1,23 @@
+--
+-- Test for detection of duplicate rule sets
+--
+
+Model "../basicmodel.uml2"
+
+Rule set "abc" 
+Applies to a Trade where the tradeDate is before '2005-12-30'
+
+Context: Trade
+Validation Rule "r1"
+tradeDate is before '2005-12-30'
+
+Context: Trade
+Validation Rule "r2"
+tradeDate is before '2005-12-30'
+
+-- duplicate
+Rule set "abc" 
+
+Context: Trade
+Validation Rule "r3"
+tradeDate is before '2005-12-30'

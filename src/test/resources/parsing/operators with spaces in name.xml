@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operators xmlns="urn:net:sourceforge:nrl:1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:net:sourceforge:nrl:1.5 operators-1.5.xsd" version="1.5.0">
+	<documentation>Global documentation</documentation>
+	<operator>
+		<name>Operator one</name>		
+		<documentation>Docs!</documentation>	
+		<purpose>Purpose</purpose>    
+		<parameters>
+			<parameter>
+				<name>paramA</name>
+				<type>Decimal</type>
+				<implementationDetail>
+					<label>JAVA_CAST</label>
+					<value>(int)</value>
+				</implementationDetail>
+			</parameter>
+			<parameter>
+				<name>paramB</name>
+				<type>String</type>
+			</parameter>
+		</parameters>
+		<implementationDetail>
+			<label>JAVA_CLASS</label>
+			<value>OpClass</value>
+		</implementationDetail>
+		<implementationDetail>
+			<label>JAVA_METHOD</label>
+			<value>operatorOne</value>
+		</implementationDetail>
+	</operator>
+	<operator>
+		<name>Operator two</name>
+	</operator>
+</operators>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://www.modeltwozero.com/test/b" xmlns="http://www.modeltwozero.com/test/b">
+
+    <xs:complexType name="bTypeOne">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="bTypeOneElementOne" type="xs:string"
+                minOccurs="0"/>
+            <xs:element name="bTypeOneElementTwo" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="bElementOne">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bElementOneElementOne" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

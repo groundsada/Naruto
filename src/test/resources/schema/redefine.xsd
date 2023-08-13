@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="xmlns:test" xmlns="xmlns:test">
+    <xs:redefine schemaLocation="complextypes.xsd">
+        <xs:complexType name="Basic">
+            <xs:complexContent>
+                <xs:restriction base="Basic">
+                    <xs:sequence>
+                        <xs:element name="simple" type="xs:string" minOccurs="0"/>
+                        <xs:element name="mySimple" type="MySimpleType"/>
+                        <xs:element name="anotherSimple" type="xs:string" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:restriction>
+            </xs:complexContent>
+        </xs:complexType>        
+    </xs:redefine>
+</xs:schema>

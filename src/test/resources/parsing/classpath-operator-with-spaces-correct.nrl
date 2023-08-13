@@ -1,0 +1,12 @@
+-- Test for full ANTLR parser. Simple file
+--
+-- n.b. rules make no sense
+
+Model "../uml/basicmodel.uml"
+
+Operators "classpath:/parsing/operators with spaces in name.xml"
+
+Context: Trade
+Validation Rule "expr-1"
+"var" is [Operator two], var is present
+

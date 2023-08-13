@@ -1,0 +1,12 @@
+-- Test for full ANTLR parser. Simple file
+--
+-- n.b. rules make no sense
+
+Model "classpath:/uml/basicmodel.uml"
+
+Operators "./operators.xml"
+
+Context: Trade
+Validation Rule "expr-1"
+"var" is [another trade], var is present
+

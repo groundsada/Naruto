@@ -1,0 +1,9 @@
+-- Test for full ANTLR parser. Simple file
+--
+-- n.b. rules make no sense
+
+Model "classpath:/uml/basic space.uml"
+
+Context: Trade
+Validation Rule "expr-1"
+true is equal to true

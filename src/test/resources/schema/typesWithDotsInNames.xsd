@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:complexType name="Basic">
+		<xs:sequence>
+			<xs:element name="simple" type="xs:string" minOccurs="0"/>
+			<xs:element name="mySimple" type="My.Simple.Type"/>
+			<xs:element name="anotherSimple" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="My.Simple.Type">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="My.ComplexType">
+		<xs:sequence>
+			<xs:element name="element" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="My.ExtendedType">
+		<xs:complexContent>
+			<xs:extension base="My.ComplexType"/>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

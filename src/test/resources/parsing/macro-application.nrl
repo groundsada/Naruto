@@ -1,0 +1,18 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Macro application
+--
+
+Model "unused"
+
+Context: Test ("test")
+Action Fragment "eat"
+Set ab to 'c'
+
+Context: Test
+Action Rule "r1"
+Create a new trade, then {eat} the trade
+
+Context: Test
+Action Rule "invalid"
+{invalid macro} 'x'

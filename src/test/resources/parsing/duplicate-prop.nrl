@@ -1,0 +1,18 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Duplicate property id
+--
+
+Model "unused"
+
+Context: Test ("test")
+Validation Fragment "dupl"
+foo = 'A' and bar = 'B'
+
+Context: Test
+Validation Rule "or-1"
+foo = 'A' or bar = 'B'
+
+Context: Test ("test")
+Validation Fragment "dupl"
+foo = 'A' implies bar = 'B'

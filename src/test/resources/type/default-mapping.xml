@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<typeMapping>
+	<mapping package="*" name="base64Binary" type="String"/>	
+    <mapping package="*" name="ENTITY" type="String"/>
+    <mapping package="*" name="String" type="String"/>
+    <mapping package="*" name="string" type="String"/>
+    <mapping package="*" name="language" type="String"/>
+    <mapping package="*" name="normalizedString" type="String"/>
+    <mapping package="*" name="token" type="String"/>
+    <mapping package="*" name="ID" type="String"/>
+    <mapping package="*" name="IDREF" type="String"/>
+    <mapping package="*" name="Name" type="String"/>
+    <mapping package="*" name="NCName" type="String"/>
+    <mapping package="*" name="NMTOKEN" type="String"/>
+    <mapping package="*" name="QName" type="String"/>
+    <mapping package="*" name="anyURI" type="String"/>
+
+    <mapping package="*" name="byte" type="IntegerNumber"/>
+    <mapping package="*" name="Decimal" type="DecimalNumber"/>
+    <mapping package="*" name="decimal" type="DecimalNumber"/>
+    <mapping package="*" name="Integer" type="IntegerNumber"/>
+    <mapping package="*" name="integer" type="IntegerNumber"/>
+    <mapping package="*" name="Int" type="IntegerNumber"/>
+    <mapping package="*" name="int" type="IntegerNumber"/>
+    <mapping package="*" name="Long" type="IntegerNumber"/>
+    <mapping package="*" name="long" type="IntegerNumber"/>
+    <mapping package="*" name="Double" type="DecimalNumber"/>
+    <mapping package="*" name="double" type="DecimalNumber"/>
+    <mapping package="*" name="Float" type="DecimalNumber"/>
+    <mapping package="*" name="float" type="DecimalNumber"/>
+    <mapping package="*" name="short" type="IntegerNumber"/>
+    <mapping package="*" name="negativeInteger" type="IntegerNumber"/>
+    <mapping package="*" name="nonPositiveInteger" type="IntegerNumber"/>
+    <mapping package="*" name="nonNegativeInteger" type="IntegerNumber"/>
+    <mapping package="*" name="positiveInteger" type="IntegerNumber"/>
+    <mapping package="*" name="unsignedByte" type="IntegerNumber"/>
+    <mapping package="*" name="unsignedShort" type="IntegerNumber"/>
+    <mapping package="*" name="unsignedInt" type="IntegerNumber"/>
+    <mapping package="*" name="unsignedLong" type="IntegerNumber"/>
+    <mapping package="*" name="UnlimitedNatural" type="DecimalNumber"/>
+
+    <mapping package="*" name="Boolean" type="Boolean"/>
+    <mapping package="*" name="boolean" type="Boolean"/>
+    <mapping package="*" name="Bool" type="Boolean"/>
+    <mapping package="*" name="bool" type="Boolean"/>
+
+    <mapping package="*" name="Date" type="Date"/>
+    <mapping package="*" name="date" type="Date"/>
+    <mapping package="*" name="dateTime" type="Date"/>
+    <mapping package="*" name="DateTime" type="Date"/>
+    <mapping package="*" name="time" type="Date"/>
+    <mapping package="*" name="Time" type="Date"/>
+    <mapping package="*" name="gDay" type="Date"/>
+    <mapping package="*" name="gMonth" type="Date"/>
+    <mapping package="*" name="gMonthDay" type="Date"/>
+    <mapping package="*" name="gYear" type="Date"/>
+    <mapping package="*" name="gYearMonth" type="Date"/>
+    <mapping package="*" name="java.util.Date" type="Date"/>
+    <mapping package="*" name="duration" type="String"/>
+    
+</typeMapping>

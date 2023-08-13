@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: net.sourceforge.nrl.parser.cmdline.Main
+Class-Path: lib/antlr.jar lib/log4j-1.2.8.jar lib/uml/org.eclipse.emf.common_2.1.0.jar lib/uml/org.eclipse.emf.ecore_2.1.0.jar lib/uml/org.eclipse.emf.ecore.xmi_2.1.0.jar lib/uml/org.eclipse.uml2_1.1.1.jar lib/uml/org.eclipse.uml2.common_1.1.1.jar lib/uml/org.eclipse.uml2.resources_1.1.0.jar

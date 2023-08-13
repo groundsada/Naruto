@@ -1,0 +1,17 @@
+#Wed Mar 28 14:57:35 BST 2012
+eclipse.preferences.version=1
+encoding//src/main/resources/nrlparser.xsd=UTF8
+encoding//src/main/resources/operators-1.5.xsd=UTF8
+encoding//src/test/java/net/sourceforge/nrl/parser/NRLParserTest.java=UTF-8
+encoding//src/test/java/net/sourceforge/nrl/parser/ast/constraints/impl/ModelReferenceImplTest.java=UTF-8
+encoding//src/test/java/net/sourceforge/nrl/parser/model/xsd/UTFTest.java=UTF-8
+encoding//src/test/resources/parsing/utf16.nrl=UTF-16
+encoding//src/test/resources/parsing/utf8.nrl=UTF-8
+encoding//src/test/resources/schema/attributegroup.xsd=UTF8
+encoding//src/test/resources/schema/complextypes.xsd=UTF8
+encoding//src/test/resources/schema/global\ elements.xsd=UTF8
+encoding//src/test/resources/schema/global\ import.xsd=UTF8
+encoding//src/test/resources/schema/global\ include.xsd=UTF8
+encoding//src/test/resources/schema/globalelements.xsd=UTF8
+encoding//src/test/resources/schema/metadata.xsd=UTF8
+encoding//src/test/resources/schema/simpletypes.xsd=UTF8

@@ -1,0 +1,14 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Duplicate rule id
+--
+
+Model "unused"
+
+"test" is 0
+"test" is 0
+
+Context: Test
+Validation Rule "or-1"
+foo = 'A' or bar = 'B'
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:group name="GroupBase">
+        <xs:sequence>
+            <xs:element name="typeNameC">
+                <xs:complexType>
+                    <xs:attribute name="attr" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="SuperType">
+        <xs:sequence>
+            <xs:group ref="GroupBase"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

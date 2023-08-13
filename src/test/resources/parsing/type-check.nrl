@@ -1,0 +1,10 @@
+-- Test for type checker. Simple file
+--
+-- n.b. rules make no sense
+
+Model "../basicmodel.uml2"
+
+Context: Trade
+Validation Rule "expr-1"
+tradeDate is before '2005-12-30'
+

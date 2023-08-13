@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="_8cX4MIjxEdqDAZUNGzflRQ" name="BasicModel">
+  <eAnnotations xmi:id="_8cX4MYjxEdqDAZUNGzflRQ" source="uml2.diagrams"/>
+  <packageImport xmi:id="_8qB5sIjxEdqDAZUNGzflRQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_K-CzwJQoEdqL3tie1dTaNg" name="Main">
+    <eAnnotations xmi:id="_K-I6YJQoEdqL3tie1dTaNg" source="uml2.diagrams"/>
+    <ownedComment xmi:id="_uWsOQLHLEduqc74VYhWgKg">
+      <body>Test</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PTM2IJQoEdqL3tie1dTaNg" name="Trade">
+      <ownedComment xmi:id="_xKi18LHLEduqc74VYhWgKg">
+        <body>CTest</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_8JptwJcZEdqSpvtX_MCh9g" name="id" visibility="private">
+        <ownedComment xmi:id="_z6rbQLHLEduqc74VYhWgKg">
+          <body>ATest</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/UML.metamodel.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Dx3cUJcaEdqSpvtX_MCh9g" name="tradeDate" visibility="private" type="_-cD1QJcZEdqSpvtX_MCh9g"/>
+      <ownedAttribute xmi:id="_uhy7gpcaEdqSpvtX_MCh9g" name="tradeheader" visibility="private" type="_sPlBQJcaEdqSpvtX_MCh9g" association="_uhy7gJcaEdqSpvtX_MCh9g"/>
+      <ownedAttribute xmi:id="_AegwUKc5EdueztMwaQP5iA" name="age" type="_6UuO8Kc1EdueztMwaQP5iA"/>
+      <ownedAttribute xmi:id="_qxBY4NseEd2Jf-XLdOFNBA" name="description">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_su9FMNseEd2Jf-XLdOFNBA" value="*"/>
+      </ownedAttribute>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_3bYg4N3IEduHasEa-uig6Q" name="anonymous_12">
+        <ownedAttribute xmi:id="_9CM_cN3IEduHasEa-uig6Q" name="terminationDate" type="_-cD1QJcZEdqSpvtX_MCh9g"/>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_-cD1QJcZEdqSpvtX_MCh9g" name="Date"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GXwggJcaEdqSpvtX_MCh9g" name="IR">
+      <eAnnotations xmi:id="_GXwggZcaEdqSpvtX_MCh9g" source="uml2.diagrams"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_IhGLkJcaEdqSpvtX_MCh9g" name="IRSwap">
+        <generalization xmi:id="_O3qFAJcaEdqSpvtX_MCh9g" general="_PTM2IJQoEdqL3tie1dTaNg"/>
+        <ownedAttribute xmi:id="_TNMh4JcaEdqSpvtX_MCh9g" name="effectiveDate" visibility="private" type="_-cD1QJcZEdqSpvtX_MCh9g"/>
+        <ownedAttribute xmi:id="_ixmD4ZcaEdqSpvtX_MCh9g" name="legs" visibility="private" type="_XyfSAJcaEdqSpvtX_MCh9g" association="_ixmD4JcaEdqSpvtX_MCh9g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ix4XwpcaEdqSpvtX_MCh9g" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ix4XwZcaEdqSpvtX_MCh9g" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_7tj_YN3WEduHasEa-uig6Q" name="counter" type="_xG0DIN3WEduHasEa-uig6Q"/>
+        <ownedAttribute xmi:id="_hPqSUN3YEduHasEa-uig6Q" name="untyped" type="_bGHhMN3YEduHasEa-uig6Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XyfSAJcaEdqSpvtX_MCh9g" name="IRLeg">
+        <ownedAttribute xmi:id="_c1ZLMJcaEdqSpvtX_MCh9g" name="fixFloat" visibility="private" type="_Z3VeoJcaEdqSpvtX_MCh9g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_Z3VeoJcaEdqSpvtX_MCh9g" name="FixFloatEnum">
+        <generalization xmi:id="_zlv1oN3UEduHasEa-uig6Q">
+          <general xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </generalization>
+        <ownedLiteral xmi:id="_aucs0JcaEdqSpvtX_MCh9g" name="FIXED"/>
+        <ownedLiteral xmi:id="_bYkA0JcaEdqSpvtX_MCh9g" name="FLOAT"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ixmD4JcaEdqSpvtX_MCh9g" memberEnd="_ixmD4ZcaEdqSpvtX_MCh9g _ix4XwJcaEdqSpvtX_MCh9g">
+        <ownedEnd xmi:id="_ix4XwJcaEdqSpvtX_MCh9g" visibility="private" type="_IhGLkJcaEdqSpvtX_MCh9g" association="_ixmD4JcaEdqSpvtX_MCh9g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wA_r4JokEdqKErjozusEUA" name="Ambiguous">
+        <ownedAttribute xmi:id="_0h_x4JokEdqKErjozusEUA" name="CONSTANT" type="_-cD1QJcZEdqSpvtX_MCh9g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_xG0DIN3WEduHasEa-uig6Q" name="IntValue">
+        <generalization xmi:id="_1XpmMN3WEduHasEa-uig6Q">
+          <general xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+        </generalization>
+        <ownedLiteral xmi:id="_zJMxoN3WEduHasEa-uig6Q" name="One"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_bGHhMN3YEduHasEa-uig6Q" name="UntypedEnum">
+        <ownedLiteral xmi:id="_dTFIAN3YEduHasEa-uig6Q" name="LITERAL"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wXcfwNsnEd2Jf-XLdOFNBA" name="ExtendedHeader">
+        <generalization xmi:id="_2XunMNsnEd2Jf-XLdOFNBA" general="_sPlBQJcaEdqSpvtX_MCh9g"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sPlBQJcaEdqSpvtX_MCh9g" name="TradeHeader">
+      <ownedAttribute xmi:id="_uhy7gZcaEdqSpvtX_MCh9g" name="trade" visibility="private" type="_PTM2IJQoEdqL3tie1dTaNg" association="_uhy7gJcaEdqSpvtX_MCh9g"/>
+      <ownedAttribute xmi:id="_w9jzUJcaEdqSpvtX_MCh9g" name="masterAgreement" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_U0xd4Np3Ed2kIbs16m5VTA" name="descriptions" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aluv4Np3Ed2kIbs16m5VTA" value="10"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uhy7gJcaEdqSpvtX_MCh9g" memberEnd="_uhy7gZcaEdqSpvtX_MCh9g _uhy7gpcaEdqSpvtX_MCh9g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sdskQJokEdqKErjozusEUA" name="Ambiguous"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EMcyoFzzEdum7fG3NxS8Sg" name="Ambiguous2"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_6UuO8Kc1EdueztMwaQP5iA" name="ExtendedInt">
+      <generalization xmi:id="_Cg8pgKc2EdueztMwaQP5iA">
+        <general xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_0J52YLQOEdyRbZEFkph3cQ" name="MyString">
+      <generalization xmi:id="_3lhosLQOEdyRbZEFkph3cQ">
+        <general xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/UML.metamodel.uml#String"/>
+      </generalization>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:id="_8eGWgIjxEdqDAZUNGzflRQ">
+    <eAnnotations xmi:id="_8eGWgYjxEdqDAZUNGzflRQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#__LeIQK86Edih9-GG5afQ0g"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_8fPmAIjxEdqDAZUNGzflRQ">
+    <eAnnotations xmi:id="_8fVsoIjxEdqDAZUNGzflRQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_JtpGgK87Edih9-GG5afQ0g"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_8fuHIIjxEdqDAZUNGzflRQ">
+    <eAnnotations xmi:id="_8fuHIYjxEdqDAZUNGzflRQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_QHin0K87Edih9-GG5afQ0g"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

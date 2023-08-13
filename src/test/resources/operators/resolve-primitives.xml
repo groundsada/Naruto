@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nrlparser.xsd">
+	<operator>
+		<name>Primitives Test</name>
+		<parameters>
+			<parameter>
+				<name>string</name>
+				<type>String</type>
+			</parameter>
+			<parameter>
+				<name>int</name>
+				<type>int</type>
+			</parameter>
+			<parameter>
+				<name>integer</name>
+				<type>Integer</type>
+			</parameter>
+			<parameter>
+				<name>double</name>
+				<type>Double</type>
+			</parameter>
+			<parameter>
+				<name>date</name>
+				<type>Date</type>
+			</parameter>
+			<parameter>
+				<name>float</name>
+				<type>Float</type>
+			</parameter>
+			<parameter>
+				<name>number</name>
+				<type>Decimal</type>
+			</parameter>
+			<parameter>
+				<name>boolean</name>
+				<type>Boolean</type>
+			</parameter>
+		</parameters>
+		<returnType>
+			<type>void</type>
+		</returnType>
+	</operator>
+</operators>

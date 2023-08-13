@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="DerivedString">
+		<xs:annotation>
+			<xs:documentation>test</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DerivedEnumeration">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="VALUEA"/>
+			<xs:enumeration value="VALUEB"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnumeratedInt">
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DerivedAsComplex">
+		<xs:annotation>
+			<xs:documentation>complex type derived from simple type</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="DoubleDerivation">
+		<xs:simpleContent>
+			<xs:extension base="DerivedAsComplex">
+				<xs:attribute name="id2" type="xs:ID"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="StringList">
+		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="SimpleDerivedStringList">
+		<xs:restriction base="StringList"/>
+	</xs:simpleType>
+	<xs:simpleType name="DerivedStringList">
+		<xs:list itemType="DerivedString"/>
+	</xs:simpleType>
+	<xs:simpleType name="DoubleDerivationSimple">
+		<xs:restriction base="DerivedString">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="globalStringList">
+		<xs:simpleType>
+			<xs:list itemType="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="globalDerivedStringList" type="DerivedStringList"/>
+	<xs:complexType name="Usage">
+		<xs:sequence>
+			<xs:element name="astring" type="xs:string"/>
+			<xs:element name="atoken" type="xs:token"/>
+			<xs:element name="anumber" type="xs:int"/>
+			<xs:element name="adate" type="xs:date"/>
+			<xs:element name="derivedString" type="DerivedString"/>
+			<xs:element name="derivedComplex" type="DerivedAsComplex"/>
+			<xs:element name="anonymousB">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="anonymousC">
+				<xs:simpleType>
+					<xs:restriction base="DerivedEnumeration">
+						<xs:minLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="stringList" type="StringList"/>
+			<xs:element name="derivedStringList" type="DerivedStringList"/>
+			<xs:element name="simpleDerivedStringList" type="SimpleDerivedStringList"/>
+			<xs:element name="anonymousList">
+				<xs:simpleType>
+					<xs:list itemType="xs:int"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="anonymousDerivedList">
+				<xs:simpleType>
+					<xs:list itemType="DerivedString"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="derivedAsComplexList">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="list">
+								<xs:simpleType>
+									<xs:list itemType="xs:anyURI"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="globalDerivedStringList"/>
+			<xs:element ref="globalStringList"/>
+		</xs:sequence>
+		<xs:attribute name="anonymousA">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="AnonymousComplexDerivUsage">
+		<xs:sequence>
+			<xs:element name="derivedSimpleAnonymous">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anyURI">
+							<xs:attribute name="test" type="xs:int"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="derivedSimpleAnonymous2">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anyURI">
+							<xs:attribute name="listAttr">
+								<xs:simpleType>
+									<xs:list itemType="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnumerationWithAttr">
+		<xs:simpleContent>
+			<xs:extension base="DerivedEnumeration">
+				<xs:attribute name="id" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="RestrictedEnumeration">
+		<xs:restriction base="DerivedEnumeration">
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--
+	<xs:simpleType name="UnionEnum">
+		<xs:union memberTypes="EnumeratedInt DerivedEnumeration"/>
+	</xs:simpleType>-->
+</xs:schema>

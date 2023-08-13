@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://www.modeltwozero.com/test/a" xmlns="http://www.modeltwozero.com/test/a">
+
+    <xs:complexType name="TypeOne">
+        <xs:sequence>
+            <xs:element name="element.One" type="xs:string"/>
+            <xs:element name="elementTwo" type="xs:string"/>
+            <xs:element name="element.Three" type="xs:string"/>
+            <xs:element name="elementFour" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="attributeOne" type="xs:string"/>
+        <xs:attribute name="attribute.Two" type="xs:string"/>
+        <xs:attribute name="attributeThree" type="xs:string"/>
+        <xs:attribute name="attribute.Four" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:complexType name="Container1">
+        <xs:sequence>
+            <xs:element name="element" type="xs:string"/>
+            <xs:group ref="Group1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="Group1">
+        <xs:sequence>
+            <xs:element name="element" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="Container2">
+        <xs:sequence>
+            <xs:element name="element" type="xs:string"/>
+            <xs:group ref="Group2"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="Group2">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="elementA" type="xs:int"/>
+                <xs:element name="elementB" type="xs:int"/>
+            </xs:sequence>
+            <xs:element name="elementB" type="xs:int"/>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="ContainedType">
+        <xs:sequence>
+            <xs:element name="x" type="xs:int"/>
+            <xs:element name="y" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Container3">
+        <xs:sequence>
+            <xs:element name="element" type="ContainedType"/>
+            <xs:group ref="Group3"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="Group3">
+        <xs:sequence>
+            <xs:element name="element" type="ContainedType"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="Container4">
+        <xs:sequence>
+            <xs:element name="element" type="ContainedType"/>
+            <xs:group ref="Group3"/>
+            <xs:element name="another" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Container5">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="elementX" type="xs:string"/>
+                <xs:group ref="Group2"/>
+            </xs:sequence>
+            <xs:group ref="Group2"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:group name="Group4">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="elementA" type="xs:int"/>
+                <xs:element name="elementB" type="ContainedType"/>
+            </xs:sequence>
+            <xs:element name="elementB" type="ContainedType"/>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="Container6">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="elementX" type="xs:string"/>
+                <xs:group ref="Group4"/>
+            </xs:sequence>
+            <xs:group ref="Group4"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="Container7">
+        <xs:sequence>
+            <xs:group ref="Group4"/>
+        </xs:sequence>
+        <xs:attribute name="elementA" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

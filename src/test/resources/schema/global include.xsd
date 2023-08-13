@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.test.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.test.com">
+	<xs:element name="included">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="foo" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+</xs:element>
+</xs:schema>

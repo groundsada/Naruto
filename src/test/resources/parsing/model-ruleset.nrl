@@ -1,0 +1,12 @@
+-- Test for model reference resolution of rule sets
+--
+-- n.b. rules make no sense
+
+Model "../basicmodel.uml2"
+
+Rule set "set1"
+Applies to a Trade where the tradeDate is before '2005-12-30'
+ 
+Context: Trade
+Validation Rule "expr-1"
+tradeDate is before '2005-12-30'

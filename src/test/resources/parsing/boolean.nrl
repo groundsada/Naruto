@@ -1,0 +1,23 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Boolean constructs
+--
+
+Model "unused"
+
+Context: Test
+Validation Rule "and-1"
+foo = 'A' and bar = 'B'
+
+Context: Test
+Validation Rule "or-1"
+foo = 'A' or bar = 'B'
+
+Context: Test
+Validation Rule "implies-1"
+foo = 'A' implies bar = 'B'
+
+Context: Test
+Validation Rule "iff-1"
+foo = 'A' if and only if bar = 'B'
+

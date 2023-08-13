@@ -1,0 +1,207 @@
+-- Test for model reference resolution
+--
+-- n.b. rules make no sense
+
+Model "../basicmodel.uml2"
+
+"mydate" is '2005-12-30'
+
+Context: Trade
+Action Rule "set-1"
+Set the tradeDate to '2005-12-30' 
+
+Context: Trade
+Action Rule "delete-1"
+Remove the tradeDate
+
+Context: TradeHeader
+Action Rule "delete-2"
+Remove any Trade ("t") where the tradeDate of t is before '2005-12-30' and the
+tradeDate of t is after '2005-01-01'
+
+Context: IRSwap
+Action Rule "delete-3"
+Remove any legs ("l") where l.fixFloat = FixFloatEnum.FIXED
+
+Context: Trade
+Action Rule "if-1"
+If tradeDate is before '2005-12-30' then set the tradeDate to '2005-12-30'
+otherwise set the tradeDate to '2005-12-30';
+
+Context: Trade
+Action Rule "create-1"
+Create a new Trade ("trade") 
+
+Context: Trade
+Action Rule "create-compound-1"
+Create a new Trade ("trade"), set the tradeDate of trade to '2005-12-30' 
+
+Context: IRSwap
+Action Rule "add-1"
+Create a new IRLeg ("leg"), add the leg to the legs
+
+Context: IRSwap
+Action Rule "remove-1"
+Create a new IRLeg ("leg"), add the leg to the legs, remove the leg from the legs
+
+Context: IRSwap
+Action Rule "iterate-1"
+For each of the legs, set fixFloat to FixFloatEnum.FIXED;
+
+Context: IRSwap
+Action Rule "iterate-2"
+For each "leg" in the collection of legs, set leg.fixFloat to FixFloatEnum.FIXED;
+
+Context: IRSwap ("swap")
+Action Fragment "macro-1"
+Set the swap.tradeDate to '2005-12-30'
+
+Context: IRSwap ("swap"), TradeHeader ("header")
+Action Fragment "macro-2"
+Set the swap.tradeDate to '2005-12-30',
+Set the header.masterAgreement to 'abc'
+
+Context: IRSwap
+Action Rule "variable-1"
+"x" represents tradeDate,
+set tradeDate to x
+
+Context: IRSwap
+Action Rule "variable-2"
+"x" represents '2005-12-30',
+set tradeDate to x
+
+-- Local scope
+Context: IRSwap
+Action Rule "variable-3"
+If 1 = 2 then
+  "x" represents '2005-12-30',
+  set tradeDate to x
+else
+  "x" represents '2005-12-30',
+  set tradeDate to x;
+
+Context: IRSwap
+Action Rule "variable-4"
+"x" is a TradeHeader,
+Set tradeDate to x.masterAgreement
+
+Context: IRSwap
+Action Rule "global-var"
+set tradeDate to mydate
+
+Context: None
+Action Rule "no-context"
+Create a new Trade ("trade")
+
+Context: IRSwap
+Action Rule "selection-2"
+"x" is the first legs where (a fixFloat is present)
+"y" is the first legs where (a fixFloat is present)
+
+Context: Trade
+Validation Rule "cast-1"
+"test" represents the Trade as an IRSwap
+test.tradeDate is before '2005-12-12'
+
+Context: Trade
+Validation Rule "is-subtype-1"
+If the Trade is a kind of IRSwap then tradeDate is before '2005-12-12'
+
+Action Rule "additional-parameters-1" applies to a Trade and uses a String ("foo")
+Set the tradeDate to foo
+
+Action Rule "additional-parameters-2" applies to an IRSwap and uses a TradeHeader ("hdr"), IRSwap ("swap")
+Set the tradeDate to swap.tradeDate
+Set the tradeheader to hdr
+
+-- Invalid: creation target must be a class
+Context: Trade
+Action Rule "invalid-1"
+Create a new tradeDate ("t")
+
+-- invalid: duplicate variable
+Context: Trade
+Action Rule "invalid-2"
+Create a new Trade ("t"), Create a new Trade ("t")
+
+-- invalid: duplicate variable
+Context: Trade
+Action Rule "invalid-2.1"
+Create a new Trade ("t"), "t" represents the tradeDate
+
+-- invalid: duplicate variable
+Context: Trade
+Action Rule "invalid-2.2"
+"t" represents the tradeDate, Create a new Trade ("t") 
+
+-- invalid: duplicate variable
+Context: Trade
+Action Rule "invalid-2.3"
+"t" represents the tradeDate, "t" represents the tradeDate  
+
+-- invalid: ambiguous reference
+Context: Trade
+Action Rule "invalid-4"
+Create a new Ambiguous ("ambiguous"), 
+set ambiguous.x to 1
+
+-- Invalid: for-each with variable must use variable-relative reference
+-- i.e. leg.fixFloat instead of fixFloat
+Context: IRSwap
+Action Rule "invalid-5"
+For each "leg" in the collection of legs, set fixFloat to FixFloatEnum.FIXED;
+
+-- Invalid: variable reference does not exist
+Context: IRSwap
+Action Rule "invalid-6"
+"test" represents the NonExistent
+
+-- invalid: duplicate macro parameter names
+Context: IRSwap ("swap"), IRSwap ("swap")
+Action Fragment "invalid-7"
+set swap.tradeDate to '2005-12-12'
+
+-- invalid: non-existant model element in context
+Context: NonEntity ("swap")
+Action Fragment "invalid-8"
+Set swap.tradeDate to '2005-12-12'
+
+-- invalid: variable out of scope
+Context: IRSwap
+Action Rule "invalid-9"
+If legs are present then "foo" represents the tradeDate;
+Set foo to '2005-12-30'
+
+-- invalid: variable out of scope
+Context: IRSwap
+Action Rule "invalid-10"
+For each of the legs,
+  "foo" represents the fixFloat;
+Set foo to '2005-12-30'
+
+-- invalid - variable out of scope
+Context: IRSwap
+Action Rule "invalid-11"
+If 1 = 2 then
+  "x" represents '2005-12-30',
+  set tradeDate to x
+else
+  set tradeDate to x;
+
+-- invalid: unknown type on additional parameter 
+Action Rule "invalid-12" applies to a Trade and uses an INVALID ("foo")
+Set the tradeDate to foo
+
+-- invalid: variable name masks a global type
+Action Rule "invalid-13" applies to a Trade and uses a String ("IRSwap")
+Create a new Trade("t")
+
+-- invalid: variable name masks a global type
+Action Rule "invalid-14" applies to a Trade
+"IRSwap" is 'dave', Create a new Trade("t")
+
+
+-- invalid: variable name masks a global type
+Action Rule "invalid-15" applies to a Trade
+"Date" is 'dave', Create a new Trade("t")

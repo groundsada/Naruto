@@ -1,0 +1,18 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Test if property applications are resolved
+--
+
+Model "unused"
+
+Context: Test ("test")
+Validation Fragment "test"
+test.foo = 'A'
+
+Context: Test
+Validation Rule "valid-reference"
+one of the test elements has {test}
+
+Context: Test
+Validation Rule "invalid-reference"
+one of the test elements has {invalid}

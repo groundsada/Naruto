@@ -1,0 +1,27 @@
+<body>
+	The fully resolved abstract syntax tree (AST) representation of the constraint language. 
+	The interfaces in this package specify what a fully resolved representation of a rule file looks
+	like.
+	<p>
+	The package specifies <b>no implementation</b>. In order to obtain an AST instance, use
+	a concrete implementation, for example using the public classes in the 'antlr' subpackage.
+	<p>
+	The main interface here is <b>IRuleFile</b>. In order to get to a fully resolved 
+	implementation of this class, a number of steps have to be performed:
+	<ul>
+	  <li>An NRL file has to be parsed, into an AST representation that is specific to
+	      a parser, for example an ANTLR AST.
+	  <li>The textual cross-references in the parsed AST, for example references to properties,
+	      have to be resolved into proper object cross-references in the AST. This means
+	      that when we come across a "property application", we can directly look up the
+	      referenced property instead of retrieving its name and performing a look-up.
+	  <li>An underlying model has to be loaded, and the AST has to be resolved against it. After this
+	      step, it is possible to navigate from element references within rules directly to
+	      model elements.
+	  <li>Additional static semantic checks are performed.
+	</ul>
+	<p>
+	If any of the above steps fail, the AST is <b>unsafe</b> and has to be discarded.
+	For this reason, during all of the above steps, <code>SyntaxError</code> and 
+	<code>SemanticError</code> entries are collected.
+</body>

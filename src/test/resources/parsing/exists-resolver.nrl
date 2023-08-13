@@ -1,0 +1,23 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Test whether "existence statement" references without model elements
+-- work properly.
+--
+
+Model "unused"
+
+-- In this rule, the second "and one has" refers to 'elements',
+-- which is introduced in the first quantifier
+Context: Test
+Validation Rule "valid-reference"
+one of the test elements has foo = 'A' and one has foo = 'B'
+
+-- This is also legal. Again, "one" refers to "elements"
+Context: Test
+Validation Rule "valid-reference-2"
+if one of the test elements has foo = 'A' then one has bar = 'B'
+
+-- This is illegal. It's not clear what "one" refers to
+Context: Test
+Validation Rule "invalid-reference"
+one has foo = 'B' and one of the test elements has foo = 'A'

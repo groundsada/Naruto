@@ -1,0 +1,13 @@
+-- Tests for UTF8; rules make no sense
+
+Model "model.uml"
+
+-- Some european chars
+Context: Trade
+Validation Rule "çãüäö"
+çãüäö is before 'üß'
+
+-- Japanese
+Context: Trade
+Validation Rule "日本語"
+日本語 is before '日本語'

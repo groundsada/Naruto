@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.test.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.test.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="Usage">
+		<xs:sequence>
+			<xs:element name="elemA" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="elemB" type="xs:string"/>
+		<xs:attributeGroup ref="AttributeGroupA"/>
+	</xs:complexType>
+	<xs:attributeGroup name="AttributeGroupA">
+		<xs:attribute name="attrA" type="xs:int" use="required"/>
+		<xs:attribute name="attrB" type="xs:double" use="required"/>
+	</xs:attributeGroup>
+	<xs:complexType name="Extended">
+		<xs:complexContent>
+			<xs:extension base="Usage">
+				<xs:attribute name="extA" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

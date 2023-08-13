@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nrlparser.xsd">
+	<model>basicmodel.uml</model>
+	<operator>
+		<name>Model Test</name>
+		<parameters>
+			<parameter>
+				<name>trade</name>
+				<type>BasicModel::Main::DoesNotExist</type>
+			</parameter>
+		</parameters>
+		<returnType>
+			<type>BasicModel::Main::ThisNeither</type>
+		</returnType>
+	</operator>
+</operators>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ns1="http://www.modeltwozero.com/test/duplicate/included">
+
+	<xs:import namespace="http://www.modeltwozero.com/test/duplicate/included"
+		schemaLocation="duplicate-elements-included.xsd" />
+	<xs:complexType name="NonEmptyBaseType">
+		<xs:sequence>
+			<xs:element name="element" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EmptyBaseType" />
+	<xs:complexType name="DuplicateElement1">
+		<xs:sequence>
+			<xs:element name="element" type="xs:string" />
+			<xs:element name="element" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DuplicateElement2">
+		<xs:sequence>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="otherElement" type="xs:string" />
+					<xs:element name="element" type="xs:string" minOccurs="0" />
+				</xs:sequence>
+				<xs:element name="element" type="xs:string" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DuplicateElement3">
+		<xs:sequence>
+			<xs:sequence>
+				<xs:element name="element" type="xs:string" />
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="element" type="xs:string" />
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DuplicateElement4">
+		<xs:sequence>
+			<xs:element name="element" type="xs:string" />
+			<xs:element name="element" type="xs:string" />
+			<xs:element name="element" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DuplicateElementsInheritingFromEmptyBaseType">
+		<xs:complexContent>
+			<xs:extension base="EmptyBaseType">
+				<xs:sequence>
+					<xs:sequence>
+						<xs:element name="element" type="xs:string" />
+					</xs:sequence>
+					<xs:sequence>
+						<xs:element name="element" type="xs:string" />
+					</xs:sequence>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DuplicateElementsInheritingFromNonEmptyBaseType">
+		<xs:complexContent>
+			<xs:extension base="NonEmptyBaseType">
+				<xs:sequence>
+					<xs:sequence>
+						<xs:element name="element" type="xs:string" />
+					</xs:sequence>
+					<xs:sequence>
+						<xs:element name="element" type="xs:string" />
+					</xs:sequence>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SameElementAndAttribute">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="SameMultipleElementsAndAttribute">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="id" type="xs:int" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="SuperType">
+		<xs:sequence>
+			<xs:element name="element" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubTypeWithDuplicate">
+		<xs:complexContent>
+			<xs:extension base="SuperType">
+				<xs:sequence>
+					<xs:element name="element" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SuperTypeWithUnboundedChoice">
+		<xs:sequence>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="elementA" type="xs:string" />
+				<xs:element name="elementB" type="xs:string" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubTypeForUnboundedChoice">
+		<xs:complexContent>
+			<xs:extension base="SuperTypeWithUnboundedChoice">
+				<xs:sequence>
+					<xs:element name="elementC" type="xs:string" />
+					<xs:element name="elementA" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SuperTypeWithCollision">
+		<xs:sequence>
+			<xs:element name="elementA" type="xs:string" />
+			<xs:element name="elementA" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubTypeWithCollisionInSuperType">
+		<xs:complexContent>
+			<xs:extension base="SuperTypeWithCollision">
+				<xs:sequence>
+					<xs:element name="elementC" type="xs:string" />
+					<xs:element name="elementA" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SubstitutionContainer">
+		<xs:sequence>
+			<xs:element ref="ns1:substitutableElement" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubstitutedType">
+		<xs:complexContent>
+			<xs:extension base="ns1:SubstitutableType">
+				<xs:sequence>
+					<xs:element name="element2" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="substitutableElement" substitutionGroup="ns1:substitutableElement"
+		type="SubstitutedType" />
+	<xs:complexType name="SubTypeWithClashAndUnboundedChoice">
+		<xs:complexContent>
+			<xs:extension base="SuperTypeWithCollision">
+				<xs:sequence>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element name="elementB" type="xs:string" />
+						<xs:element name="elementC" type="xs:string" />
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SubTypeWithNoClashAndUnboundedChoice">
+		<xs:complexContent>
+			<xs:extension base="SuperType">
+				<xs:sequence>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element name="elementB" type="xs:string" />
+						<xs:element name="elementC" type="xs:string" />
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+
+</xs:schema>

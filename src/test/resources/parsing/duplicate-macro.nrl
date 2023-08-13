@@ -1,0 +1,18 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Duplicate macro id
+--
+
+Model "unused"
+
+Context: Test ("test")
+Action Fragment "dupl"
+Set ab to 'c'
+
+Context: Test ("test")
+Action Fragment "or-1"
+Set ab to 'c'
+
+Context: Test ("test")
+Action Fragment"dupl"
+Set ab to 'c'

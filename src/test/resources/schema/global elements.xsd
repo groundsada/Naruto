@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://www.test.com" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="http://www.test.com"
+	xmlns:imp="http://www.test.com/import">
+	<xs:include schemaLocation="global%20include.xsd"/>
+	<xs:import namespace="http://www.test.com/import" schemaLocation="global%20import.xsd"/>
+	<xs:element name="importedElement" type="imp:importedType"/>
+	<xs:element name="globalElementA">
+		<xs:annotation>
+			<xs:documentation>Simple global element, anonymous type</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementA" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="globalElementB">
+		<xs:annotation>
+			<xs:documentation>Derived from simple type</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="globalElementC" type="TypeB">
+		<xs:annotation>
+			<xs:documentation>Assigned type with different name</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="globalElementD" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Global element with simple type</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="globalElementE">
+		<xs:annotation>
+			<xs:documentation>Anonymous complex type derived from simple</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="test" type="xs:integer"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TypeB">
+		<xs:annotation>
+			<xs:documentation>Global complex type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="a" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TypeB" type="TypeB">
+		<xs:annotation>
+			<xs:documentation>Element with same name as type!</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="TypeC">
+		<xs:annotation>
+			<xs:documentation>Global element, anonymous type</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="test" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TypeC">
+		<xs:annotation>
+			<xs:documentation>Completely different type, even though same element</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="a" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TypeWithReferences">
+		<xs:sequence>
+			<xs:element ref="globalElementA"/>
+			<xs:element ref="TypeB"/>
+			<xs:element ref="globalElementC"/>
+			<xs:element ref="globalElementD"/>
+			<xs:group ref="MyModelGroup"/>
+			<xs:element ref="test.element_element"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="MyModelGroup">
+		<xs:sequence>
+			<xs:element name="x" type="xs:string"/>
+			<xs:element name="y" type="xs:string"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:element name="test.element_element">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="elementA" type="xs:string"/>
+				<xs:element name="elementB.c.d" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

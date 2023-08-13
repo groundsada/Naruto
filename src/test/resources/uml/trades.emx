@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:XMLSchema="http:///schemas/XMLSchema/_ISKYoOZMEduVs5K2q0eclw/2" xmlns:XSDGeneration="http:///schemas/XSDGeneration/_CnKIMOZNEduBes0qZMEdMA/3" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xsi:schemaLocation="http:///schemas/XMLSchema/_ISKYoOZMEduVs5K2q0eclw/2 pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ISKYoeZMEduVs5K2q0eclw http:///schemas/XSDGeneration/_CnKIMOZNEduBes0qZMEdMA/3 pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_CnQO0OZNEduBes0qZMEdMA">
+  <uml:Model xmi:id="_Q_hX8OOpEd2jTt81pWIiKQ" name="javatest">
+    <packageImport xmi:id="_RNOcwuOpEd2jTt81pWIiKQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzIoEtXEdqhPYJq3sEkGA"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_RN05sOOpEd2jTt81pWIiKQ" name="javatest">
+      <packagedElement xmi:type="uml:Class" xmi:id="_RN05suOpEd2jTt81pWIiKQ" name="Trade">
+        <ownedAttribute xmi:id="_RN05s-OpEd2jTt81pWIiKQ" name="id">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN05tOOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN05teOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN05tuOpEd2jTt81pWIiKQ" name="date">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJD0tXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN05t-OpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN05uOOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN05ueOpEd2jTt81pWIiKQ" name="numberOfLegs">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzI-0tXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN05uuOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN05u-OpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN05vOOpEd2jTt81pWIiKQ" name="value">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzI70tXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN05veOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN05vuOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN05v-OpEd2jTt81pWIiKQ" name="type" type="_RN05wOOpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DouOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-Do-OpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-DpOOpEd2jTt81pWIiKQ" name="leg" type="_RN-DpeOpEd2jTt81pWIiKQ" aggregation="composite" association="_RN-DvuOpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DvOOpEd2jTt81pWIiKQ" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-DveOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-DwOOpEd2jTt81pWIiKQ" name="totalValue" type="_RN-Dp-OpEd2jTt81pWIiKQ" aggregation="composite" association="_RN-Dw-OpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DweOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-DwuOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-DxeOpEd2jTt81pWIiKQ" name="netted">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzIw0tXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DxuOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-Dx-OpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-DyOOpEd2jTt81pWIiKQ" name="derived" type="_RN-DyeOpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DzOOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-DzeOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-DzuOpEd2jTt81pWIiKQ" name="currency" type="_RN-Dz-OpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-D1uOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-D1-OpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-D2OOpEd2jTt81pWIiKQ" name="stringlist">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-D2eOpEd2jTt81pWIiKQ" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-D2uOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_RN05wOOpEd2jTt81pWIiKQ" name="TradeTypeEnum">
+        <generalization xmi:id="_RN-DoOOpEd2jTt81pWIiKQ">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJSUtXEdqhPYJq3sEkGA"/>
+        </generalization>
+        <ownedLiteral xmi:id="_RN05weOpEd2jTt81pWIiKQ" name="FX"/>
+        <ownedLiteral xmi:id="_RN05wuOpEd2jTt81pWIiKQ" name="30"/>
+        <ownedLiteral xmi:id="_RN05w-OpEd2jTt81pWIiKQ" name="I30"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RN-DpeOpEd2jTt81pWIiKQ" name="TradeLeg">
+        <ownedAttribute xmi:id="_RN-DpuOpEd2jTt81pWIiKQ" name="pay" type="_RN-Dp-OpEd2jTt81pWIiKQ" aggregation="composite" association="_RN-DsOOpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DruOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-Dr-OpEd2jTt81pWIiKQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-DsuOpEd2jTt81pWIiKQ" name="receive" type="_RN-Dp-OpEd2jTt81pWIiKQ" aggregation="composite" association="_RN-DteOpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-Ds-OpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-DtOOpEd2jTt81pWIiKQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-Dt-OpEd2jTt81pWIiKQ" name="netCashFlow" type="_RN-Dp-OpEd2jTt81pWIiKQ" aggregation="composite" association="_RN-DuuOpEd2jTt81pWIiKQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DuOOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-DueOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RN-Dp-OpEd2jTt81pWIiKQ" name="Amount">
+        <ownedAttribute xmi:id="_RN-DqOOpEd2jTt81pWIiKQ" name="amount">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJB0tXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DqeOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-DquOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RN-Dq-OpEd2jTt81pWIiKQ" name="currency">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-DrOOpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-DreOpEd2jTt81pWIiKQ" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RN-DsOOpEd2jTt81pWIiKQ" memberEnd="_RN-DseOpEd2jTt81pWIiKQ _RN-DpuOpEd2jTt81pWIiKQ">
+        <ownedEnd xmi:id="_RN-DseOpEd2jTt81pWIiKQ" type="_RN-DpeOpEd2jTt81pWIiKQ" association="_RN-DsOOpEd2jTt81pWIiKQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RN-DteOpEd2jTt81pWIiKQ" memberEnd="_RN-DtuOpEd2jTt81pWIiKQ _RN-DsuOpEd2jTt81pWIiKQ">
+        <ownedEnd xmi:id="_RN-DtuOpEd2jTt81pWIiKQ" type="_RN-DpeOpEd2jTt81pWIiKQ" association="_RN-DteOpEd2jTt81pWIiKQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RN-DuuOpEd2jTt81pWIiKQ" memberEnd="_RN-Du-OpEd2jTt81pWIiKQ _RN-Dt-OpEd2jTt81pWIiKQ">
+        <ownedEnd xmi:id="_RN-Du-OpEd2jTt81pWIiKQ" type="_RN-DpeOpEd2jTt81pWIiKQ" association="_RN-DuuOpEd2jTt81pWIiKQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RN-DvuOpEd2jTt81pWIiKQ" memberEnd="_RN-Dv-OpEd2jTt81pWIiKQ _RN-DpOOpEd2jTt81pWIiKQ">
+        <ownedEnd xmi:id="_RN-Dv-OpEd2jTt81pWIiKQ" type="_RN05suOpEd2jTt81pWIiKQ" association="_RN-DvuOpEd2jTt81pWIiKQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RN-Dw-OpEd2jTt81pWIiKQ" memberEnd="_RN-DxOOpEd2jTt81pWIiKQ _RN-DwOOpEd2jTt81pWIiKQ">
+        <ownedEnd xmi:id="_RN-DxOOpEd2jTt81pWIiKQ" type="_RN05suOpEd2jTt81pWIiKQ" association="_RN-Dw-OpEd2jTt81pWIiKQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_RN-DyeOpEd2jTt81pWIiKQ" name="DerivedDecimal">
+        <generalization xmi:id="_RN-DyuOpEd2jTt81pWIiKQ">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJB0tXEdqhPYJq3sEkGA"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_RN-Dz-OpEd2jTt81pWIiKQ" name="Currency">
+        <generalization xmi:id="_RN-D0OOpEd2jTt81pWIiKQ">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJUUtXEdqhPYJq3sEkGA"/>
+        </generalization>
+        <ownedAttribute xmi:id="_RN-D0eOpEd2jTt81pWIiKQ" name="scheme">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RN-D0-OpEd2jTt81pWIiKQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RN-D0uOpEd2jTt81pWIiKQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RN-D2-OpEd2jTt81pWIiKQ" name="ExtendedAmount">
+        <generalization xmi:id="_RN-D3OOpEd2jTt81pWIiKQ" general="_RN-Dp-OpEd2jTt81pWIiKQ"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_RCfzcOOpEd2jTt81pWIiKQ">
+      <eAnnotations xmi:id="_RCfzceOpEd2jTt81pWIiKQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_CnQO0OZNEduBes0qZMEdMA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_yvqaMUtXEdqCydWod9T-cg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_RMVr8OOpEd2jTt81pWIiKQ">
+      <eAnnotations xmi:id="_RMVr8eOpEd2jTt81pWIiKQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ISKYoeZMEduVs5K2q0eclw"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ytRNgEtXEdqCydWod9T-cg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_RNOcwOOpEd2jTt81pWIiKQ">
+      <eAnnotations xmi:id="_RNOcweOpEd2jTt81pWIiKQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_IN8k8MmBEdqBcN1R6EvWUw?Default/Default?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+    </profileApplication>
+  </uml:Model>
+  <XSDGeneration:SchemaGen xmi:id="_RJM4YOOpEd2jTt81pWIiKQ" base_Package="_Q_hX8OOpEd2jTt81pWIiKQ" complexTypeSuffix="" globalElements="false"/>
+  <XMLSchema:Schema xmi:id="_RN05seOpEd2jTt81pWIiKQ" base_Package="_RN05sOOpEd2jTt81pWIiKQ"/>
+  <XMLSchema:SimpleType xmi:id="_RN-DoeOpEd2jTt81pWIiKQ" base_DataType="_RN05wOOpEd2jTt81pWIiKQ"/>
+  <XMLSchema:SimpleType xmi:id="_RN-Dy-OpEd2jTt81pWIiKQ" base_DataType="_RN-DyeOpEd2jTt81pWIiKQ"/>
+  <XMLSchema:Attribute xmi:id="_RN-D1OOpEd2jTt81pWIiKQ" base_Property="_RN-D0eOpEd2jTt81pWIiKQ"/>
+  <XMLSchema:ComplexType xmi:id="_RN-D1eOpEd2jTt81pWIiKQ" base_DataType="_RN-Dz-OpEd2jTt81pWIiKQ"/>
+</xmi:XMI>

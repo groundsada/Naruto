@@ -1,0 +1,9 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Duplicate parameter names
+--
+
+Model "unused"
+
+Validation Rule "r1" applies to a Foo  and uses a Bar ("b1"), a Bar ("b1")
+b1 = 'A' and b1 = 'B'

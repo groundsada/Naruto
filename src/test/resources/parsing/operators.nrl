@@ -1,0 +1,23 @@
+
+Model "../basicmodel.uml"
+
+Context: Trade
+Validation Rule "r1"
+"other" represents [another trade],
+other.tradeDate is before '2010-01-01'
+
+Context: Trade
+Validation Rule "invalid-1"
+"other" represents [another trade],
+other.foobar is before '2010-01-01'
+
+Context: Trade
+Validation Rule "invalid-2"
+"other" represents [invalid type],
+other.tradeDate is before '2010-01-01'
+
+Context: Trade
+Validation Rule "invalid-3"
+"other" represents [no type],
+other.foobar is before '2010-01-01'
+

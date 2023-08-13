@@ -1,0 +1,9 @@
+-- Test for full ANTLR parser. Simple file
+--
+-- n.b. rules make no sense
+
+Model "classpath:/schema/name with spaces.xsd"
+
+Context: Basic
+Validation Rule "expr-1"
+true is equal to true

@@ -1,0 +1,10 @@
+-- Test for full ANTLR parser. Simple file
+--
+-- n.b. rules make no sense
+
+Model "../uml/basicmodel.uml"
+
+Context: Trade
+Validation Rule "expr-1"
+tradeDate is before '2005-12-30'
+

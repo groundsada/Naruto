@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://www.modeltwozero.com/test2"
+	xmlns:local="http://www.modeltwozero.com/test2" xmlns:m20="http://www.modeltwozero.com/test">
+	<xs:import schemaLocation="namespace-includes-no-namespace.xsd" namespace="http://www.modeltwozero.com/test"/>
+	<xs:complexType name="AnotherType">
+		<xs:sequence>
+			<xs:element name="element1" type="xs:decimal" />
+			<xs:element name="includedComplexType" type="m20:ComplexTypeWithIncludedType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="root" type="local:AnotherType" />
+</xs:schema>

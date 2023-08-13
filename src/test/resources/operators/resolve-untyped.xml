@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nrlparser.xsd">
+	<operator>
+		<name>Untyped</name>
+		<parameters>
+			<parameter>
+				<name>trade</name>
+			</parameter>
+		</parameters>
+	</operator>
+</operators>

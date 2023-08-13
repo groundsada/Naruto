@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.modeltwozero.com/test/a" xmlns:ns0="http://www.modeltwozero.com/test/a"
+    xmlns:ns1="http://www.modeltwozero.com/test/b" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="http://www.modeltwozero.com/test/a">
+    <xs:import namespace="http://www.modeltwozero.com/test/b" schemaLocation="metadata%20import.xsd"/>
+    <xs:complexType name="aTypeOne">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="aTypeOneElementOne" type="xs:string"/>
+            <xs:element minOccurs="0" name="aTypeOneElementTwo" type="ns1:bTypeOne"/>
+            <xs:element minOccurs="0" ref="ns1:bElementOne"/>
+            <xs:element name="anonymousElement">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="anonymousChild" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="aTypeOneAttributeOne" type="xs:string"/>
+    </xs:complexType>
+    <xs:element name="root" type="aTypeOne"/>
+</xs:schema>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<typeMapping>
+    <mapping package="*" name="IRSwap" type="String"/>
+    <mapping package="BasicModel::Main" name="Date" type="Date"/>
+</typeMapping>

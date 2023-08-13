@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:XMLSchema="http:///schemas/XMLSchema/1" xmlns:XSDGeneration="http:///schemas/XSDGeneration/2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xsi:schemaLocation="http:///schemas/XMLSchema/1 pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_w1ZVwFsuEdug6eo0EGlkNA http:///schemas/XSDGeneration/2 pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_C6Q8wJBeEduylJP3kclzAQ">
+  <uml:Model xmi:id="_ELW-HNFwEdueuqvB_mKPeg" name="TypesTest">
+    <packageImport xmi:id="_ELW-HdFwEdueuqvB_mKPeg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzIoEtXEdqhPYJq3sEkGA"/>
+    </packageImport>
+    <packageImport xmi:id="_ELW-HtFwEdueuqvB_mKPeg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ELW-H9FwEdueuqvB_mKPeg" name="simpletest">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ELW-INFwEdueuqvB_mKPeg" name="SimpleDecimal">
+        <generalization xmi:id="_ELW-IdFwEdueuqvB_mKPeg">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJB0tXEdqhPYJq3sEkGA"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ELW-ItFwEdueuqvB_mKPeg" name="ComplexDecimal">
+        <generalization xmi:id="_ELW-I9FwEdueuqvB_mKPeg">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJB0tXEdqhPYJq3sEkGA"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ELW-JNFwEdueuqvB_mKPeg" name="ComplexDecimalWithAttr">
+        <generalization xmi:id="_ELW-JdFwEdueuqvB_mKPeg">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJB0tXEdqhPYJq3sEkGA"/>
+        </generalization>
+        <ownedAttribute xmi:id="_ELW-JtFwEdueuqvB_mKPeg" name="id">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ELW-J9FwEdueuqvB_mKPeg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW-KNFwEdueuqvB_mKPeg"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ELW-KdFwEdueuqvB_mKPeg" name="Structure">
+        <ownedAttribute xmi:id="_ELW-KtFwEdueuqvB_mKPeg" name="simple" type="_ELW-INFwEdueuqvB_mKPeg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ELW-K9FwEdueuqvB_mKPeg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW-LNFwEdueuqvB_mKPeg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_ELW-LdFwEdueuqvB_mKPeg" name="complex" type="_ELW-ItFwEdueuqvB_mKPeg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ELW-LtFwEdueuqvB_mKPeg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW-L9FwEdueuqvB_mKPeg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_ELW-MNFwEdueuqvB_mKPeg" name="complexAttr" type="_ELW-JNFwEdueuqvB_mKPeg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ELW-MdFwEdueuqvB_mKPeg" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ELW-MtFwEdueuqvB_mKPeg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_ELW-M9FwEdueuqvB_mKPeg">
+      <eAnnotations xmi:id="_ELW-NNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_C6Q8wJBeEduylJP3kclzAQ"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_yvqaMUtXEdqCydWod9T-cg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ELW-NdFwEdueuqvB_mKPeg">
+      <eAnnotations xmi:id="_ELW-NtFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_w1ZVwFsuEdug6eo0EGlkNA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ytRNgEtXEdqCydWod9T-cg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ELW-N9FwEdueuqvB_mKPeg">
+      <eAnnotations xmi:id="_ELW-ONFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ELW-OdFwEdueuqvB_mKPeg">
+      <eAnnotations xmi:id="_ELW-OtFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_ELW_adFwEdueuqvB_mKPeg"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_ELW_Z9FwEdueuqvB_mKPeg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ELW-O9FwEdueuqvB_mKPeg">
+      <eAnnotations xmi:id="_ELW-PNFwEdueuqvB_mKPeg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_ELW-RdFwEdueuqvB_mKPeg"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_ELW-Q9FwEdueuqvB_mKPeg"/>
+    </profileApplication>
+  </uml:Model>
+  <XSDGeneration:SchemaGen xmi:id="_ELW-PdFwEdueuqvB_mKPeg" base_Package="_ELW-HNFwEdueuqvB_mKPeg" complexTypeSuffix="" globalElements="false"/>
+  <XMLSchema:Schema xmi:id="_ELW-PtFwEdueuqvB_mKPeg" base_Package="_ELW-H9FwEdueuqvB_mKPeg"/>
+  <XMLSchema:SimpleType xmi:id="_ELW-P9FwEdueuqvB_mKPeg" base_DataType="_ELW-INFwEdueuqvB_mKPeg"/>
+  <XMLSchema:ComplexType xmi:id="_ELW-QNFwEdueuqvB_mKPeg" base_Classifier="_ELW-ItFwEdueuqvB_mKPeg"/>
+  <XMLSchema:Attribute xmi:id="_ELW-QdFwEdueuqvB_mKPeg" base_Property="_ELW-JtFwEdueuqvB_mKPeg"/>
+  <XMLSchema:ComplexType xmi:id="_ELW-QtFwEdueuqvB_mKPeg" base_Classifier="_ELW-JNFwEdueuqvB_mKPeg"/>
+</xmi:XMI>

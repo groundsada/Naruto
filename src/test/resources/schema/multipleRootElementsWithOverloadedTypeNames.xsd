@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://www.modeltwozero.com/test" xmlns="http://www.modeltwozero.com/test"
+    xmlns:ns1="http://www.modeltwozero.com/test/a" xmlns:ns2="http://www.modeltwozero.com/test/b">
+
+    <xs:import namespace="http://www.modeltwozero.com/test/a" schemaLocation="schemaA.xsd"/>
+    <xs:import namespace="http://www.modeltwozero.com/test/b" schemaLocation="schemaB.xsd"/>
+    <xs:complexType name="overloadedType">
+        <xs:sequence>
+            <xs:element name="baseSchemaElement" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="root1" type="overloadedType"/>
+    <xs:element name="root2" type="ns1:overloadedType"/>
+    <xs:element name="root3" type="ns2:overloadedType"/>
+</xs:schema>

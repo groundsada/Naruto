@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Default="http:///schemas/Default/1" xmlns:XMLSchema="http:///schemas/XMLSchema/_ISKYoOZMEduVs5K2q0eclw/2" xmlns:XSDGeneration="http:///schemas/XSDGeneration/_CnKIMOZNEduBes0qZMEdMA/3" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xsi:schemaLocation="http:///schemas/Default/1 pathmap://UML2_MSL_PROFILES/Default.epx#_IN8k8MmBEdqBcN1R6EvWUw?Default/Default? http:///schemas/XMLSchema/_ISKYoOZMEduVs5K2q0eclw/2 pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ISKYoeZMEduVs5K2q0eclw http:///schemas/XSDGeneration/_CnKIMOZNEduBes0qZMEdMA/3 pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_CnQO0OZNEduBes0qZMEdMA">
+  <uml:Model xmi:id="_4MGfIICKEdyjd9ITUNidHA" name="simpletypes">
+    <packageImport xmi:id="_4b5OoICKEdyjd9ITUNidHA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzIoEtXEdqhPYJq3sEkGA"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4cV6kICKEdyjd9ITUNidHA" name="simpletypes">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4cV6koCKEdyjd9ITUNidHA" name="DerivedString">
+        <ownedComment xmi:id="_4cV6k4CKEdyjd9ITUNidHA">
+          <body>test</body>
+        </ownedComment>
+        <generalization xmi:id="_4cfrkYCKEdyjd9ITUNidHA">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+        </generalization>
+        <ownedAttribute xmi:id="_4cV6lYCKEdyjd9ITUNidHA" name="minLength">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4cV6loCKEdyjd9ITUNidHA" value="2"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_4cfrk4CKEdyjd9ITUNidHA" name="DerivedEnumeration">
+        <generalization xmi:id="_4cfrloCKEdyjd9ITUNidHA">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJSUtXEdqhPYJq3sEkGA"/>
+        </generalization>
+        <ownedLiteral xmi:id="_4cfrlICKEdyjd9ITUNidHA" name="VALUEA"/>
+        <ownedLiteral xmi:id="_4cfrlYCKEdyjd9ITUNidHA" name="VALUEB"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_4cfrmICKEdyjd9ITUNidHA" name="EnumeratedInt">
+        <generalization xmi:id="_4cfrm4CKEdyjd9ITUNidHA">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzI40tXEdqhPYJq3sEkGA"/>
+        </generalization>
+        <ownedLiteral xmi:id="_4cfrmYCKEdyjd9ITUNidHA" name="1"/>
+        <ownedLiteral xmi:id="_4cfrmoCKEdyjd9ITUNidHA" name="2"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4cfrnYCKEdyjd9ITUNidHA" name="DerivedAsComplex">
+        <ownedComment xmi:id="_4cfrnoCKEdyjd9ITUNidHA">
+          <body>complex type derived from simple type</body>
+        </ownedComment>
+        <generalization xmi:id="_4cfroICKEdyjd9ITUNidHA">
+          <general xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+        </generalization>
+        <ownedAttribute xmi:id="_4cfroYCKEdyjd9ITUNidHA" name="id">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4cfro4CKEdyjd9ITUNidHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cfrooCKEdyjd9ITUNidHA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4cfrpoCKEdyjd9ITUNidHA" name="DoubleDerivation">
+        <generalization xmi:id="_4cfrp4CKEdyjd9ITUNidHA" general="_4cfrnYCKEdyjd9ITUNidHA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4cfrqYCKEdyjd9ITUNidHA" name="DoubleDerivationSimple">
+        <generalization xmi:id="_4cfrrYCKEdyjd9ITUNidHA" general="_4cV6koCKEdyjd9ITUNidHA"/>
+        <ownedAttribute xmi:id="_4cfrqoCKEdyjd9ITUNidHA" name="maxLength">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4cfrq4CKEdyjd9ITUNidHA" value="10"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4cfrr4CKEdyjd9ITUNidHA" name="Usage">
+        <ownedAttribute xmi:id="_4cfrsICKEdyjd9ITUNidHA" name="astring">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJWUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4cfrsYCKEdyjd9ITUNidHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cfrsoCKEdyjd9ITUNidHA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4cfrs4CKEdyjd9ITUNidHA" name="atoken">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJSUtXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4cfrtICKEdyjd9ITUNidHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cfrtYCKEdyjd9ITUNidHA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4cfrtoCKEdyjd9ITUNidHA" name="anumber">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzI40tXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4cfrt4CKEdyjd9ITUNidHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cfruICKEdyjd9ITUNidHA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4cfruYCKEdyjd9ITUNidHA" name="adate">
+          <type xmi:type="uml:DataType" href="pathmap://XMLmodeling_LIBRARIES/XSDDataTypes.library.uml#_3RzJD0tXEdqhPYJq3sEkGA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4cfruoCKEdyjd9ITUNidHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cfru4CKEdyjd9ITUNidHA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4cfrvICKEdyjd9ITUNidHA" name="derivedString" type="_4cV6koCKEdyjd9ITUNidHA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4cfrvYCKEdyjd9ITUNidHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cfrvoCKEdyjd9ITUNidHA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_4P-SgICKEdyjd9ITUNidHA">
+      <eAnnotations xmi:id="_4P-SgYCKEdyjd9ITUNidHA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_CnQO0OZNEduBes0qZMEdMA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://XMLmodeling_PROFILES/XSDGeneration.profile.uml#_yvqaMUtXEdqCydWod9T-cg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_4bmTsICKEdyjd9ITUNidHA">
+      <eAnnotations xmi:id="_4bmTsYCKEdyjd9ITUNidHA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ISKYoeZMEduVs5K2q0eclw"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ytRNgEtXEdqCydWod9T-cg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_4bwEsICKEdyjd9ITUNidHA">
+      <eAnnotations xmi:id="_4bwEsYCKEdyjd9ITUNidHA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_IN8k8MmBEdqBcN1R6EvWUw?Default/Default?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+    </profileApplication>
+  </uml:Model>
+  <XSDGeneration:SchemaGen xmi:id="_4XugUICKEdyjd9ITUNidHA" base_Package="_4MGfIICKEdyjd9ITUNidHA" complexTypeSuffix="" globalElements="false"/>
+  <XMLSchema:Schema xmi:id="_4cV6kYCKEdyjd9ITUNidHA" base_Package="_4cV6kICKEdyjd9ITUNidHA"/>
+  <Default:Documentation xmi:id="_4cV6lICKEdyjd9ITUNidHA" base_Comment="_4cV6k4CKEdyjd9ITUNidHA"/>
+  <XMLSchema:Facet xmi:id="_4cfrkICKEdyjd9ITUNidHA" base_Property="_4cV6lYCKEdyjd9ITUNidHA"/>
+  <XMLSchema:SimpleType xmi:id="_4cfrkoCKEdyjd9ITUNidHA" base_DataType="_4cV6koCKEdyjd9ITUNidHA"/>
+  <XMLSchema:SimpleType xmi:id="_4cfrl4CKEdyjd9ITUNidHA" base_DataType="_4cfrk4CKEdyjd9ITUNidHA"/>
+  <XMLSchema:SimpleType xmi:id="_4cfrnICKEdyjd9ITUNidHA" base_DataType="_4cfrmICKEdyjd9ITUNidHA"/>
+  <Default:Documentation xmi:id="_4cfrn4CKEdyjd9ITUNidHA" base_Comment="_4cfrnoCKEdyjd9ITUNidHA"/>
+  <XMLSchema:Attribute xmi:id="_4cfrpICKEdyjd9ITUNidHA" base_Property="_4cfroYCKEdyjd9ITUNidHA"/>
+  <XMLSchema:ComplexType xmi:id="_4cfrpYCKEdyjd9ITUNidHA" base_DataType="_4cfrnYCKEdyjd9ITUNidHA"/>
+  <XMLSchema:ComplexType xmi:id="_4cfrqICKEdyjd9ITUNidHA" base_DataType="_4cfrpoCKEdyjd9ITUNidHA"/>
+  <XMLSchema:Facet xmi:id="_4cfrrICKEdyjd9ITUNidHA" base_Property="_4cfrqoCKEdyjd9ITUNidHA"/>
+  <XMLSchema:SimpleType xmi:id="_4cfrroCKEdyjd9ITUNidHA" base_DataType="_4cfrqYCKEdyjd9ITUNidHA"/>
+</xmi:XMI>

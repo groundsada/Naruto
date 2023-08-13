@@ -1,0 +1,9 @@
+-- Test for parser and AST construction. Model reference not used.
+--
+-- Test whether illegal character references are correctly handled
+
+Model "foo.xml"
+
+Context: Test
+Validation Rule "Present-1"
+trades.date ~ is not present

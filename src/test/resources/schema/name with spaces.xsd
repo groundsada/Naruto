@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:mtz1="http://www.modeltwozero.com/Test1" 
+	xmlns:mtz2="http://www.modeltwozero.com/Test2" 
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:import schemaLocation="complextypes-includes1.xsd"
+		namespace="http://www.modeltwozero.com/Test1" />
+	<xs:import schemaLocation="complextypes-includes2.xsd"
+		namespace="http://www.modeltwozero.com/Test2" />
+	
+	<xs:complexType name="Basic">
+		<xs:sequence>
+			<xs:element name="simple" type="xs:string" minOccurs="0" />
+			<xs:element name="mySimple" type="MySimpleType" />
+			<xs:element name="anotherSimple" type="xs:string"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="optional" />
+	</xs:complexType>
+	<xs:simpleType name="MySimpleType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:complexType name="SimpleChoice">
+		<xs:choice>
+			<xs:element name="childA" type="xs:string" />
+			<xs:element name="childB" type="xs:string" minOccurs="0" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="NestedA">
+		<xs:sequence>
+			<xs:element name="childA" type="xs:string" />
+			<xs:choice minOccurs="0">
+				<xs:element name="childB" type="xs:string" />
+				<xs:element name="childC" type="xs:string" />
+			</xs:choice>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="childD" type="xs:string" />
+					<xs:element name="childE" type="xs:double" />
+				</xs:choice>
+				<xs:choice>
+					<xs:element name="childF" type="xs:int" />
+					<xs:element name="childG" type="xs:long" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WithAnonymousComplex">
+		<xs:sequence>
+			<xs:element name="simple" type="xs:string" />
+			<xs:element name="anonymousComplex">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="Basic">
+							<xs:sequence>
+								<xs:element name="test" type="xs:int" />
+								<xs:element name="anonymousNested">
+									<xs:complexType>
+										<xs:complexContent>
+											<xs:extension base="NestedA">
+												<xs:sequence>
+													<xs:element name="x" type="xs:string" />
+												</xs:sequence>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="anonymousComplex2">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="childA" type="xs:string" />
+						<xs:element name="childB" type="xs:int" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WithAnonymousComplex2">
+		<xs:sequence>
+			<xs:element name="anonymousComplex">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="NestedA">
+							<xs:sequence>
+								<xs:element name="test" type="xs:string" />
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WithAnonymousSimple">
+		<xs:sequence>
+			<xs:element name="facetted">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1" />
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="enumerated">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ENUMA" />
+						<xs:enumeration value="ENUMB" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="internal">
+				<xs:simpleType>
+					<xs:restriction base="MySimpleType">
+						<xs:maxLength value="1" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WithDerivedAnonymousComplex">
+		<xs:sequence>
+			<xs:element name="anonymousComplexElement1" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:normalizedString">
+							<xs:attribute name="simpleContentAttribute" type="xs:anyURI" />
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="anonymousComplexElement2" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="AnotherComplexType">
+							<xs:attribute name="complexContentAttribute" type="xs:anyURI" />
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AnotherComplexType">
+		<xs:sequence>
+			<xs:element name="anotherElement" type="xs:decimal" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle1">
+		<xs:annotation>
+			<xs:documentation>Just one element, simple type. Top sequence
+				repeats</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="elementA" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle1b">
+		<xs:annotation>
+			<xs:documentation>Just one element, simple type. Spurious
+				particles</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="elementA" type="xs:string" />
+				</xs:sequence>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle2">
+		<xs:annotation>
+			<xs:documentation>Just one element, complex type. Top sequence
+				repeats</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="elementA" type="Basic" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle3">
+		<xs:annotation>
+			<xs:documentation>Multiple elements, mixed types, top
+				sequence repeats</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="elementA" type="xs:string" />
+			<xs:element name="elementB" type="Basic" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle3b">
+		<xs:annotation>
+			<xs:documentation>Multiple elements, mixed types with
+				anonymous type, top sequence repeats</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="elementA">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="foo" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="elementB">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="bar" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle4">
+		<xs:annotation>
+			<xs:documentation>Multiple elements, same types, top sequence
+				repeats</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="elementA" type="Basic" />
+			<xs:element name="elementB" type="Basic" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle5">
+		<xs:annotation>
+			<xs:documentation>Repeating choice</xs:documentation>
+		</xs:annotation>
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="elementA" type="Basic" />
+			<xs:element name="elementB" type="xs:string" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle6">
+		<xs:annotation>
+			<xs:documentation>Choice with contained sequences
+			</xs:documentation>
+		</xs:annotation>
+		<xs:choice maxOccurs="unbounded">
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="elementA" type="xs:string" />
+				<xs:element name="elementB" type="xs:string" />
+			</xs:sequence>
+			<xs:element name="elementC" type="Basic" />
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="elementD" type="xs:string" />
+			</xs:sequence>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle7">
+		<xs:annotation>
+			<xs:documentation>Spurious containment</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:sequence minOccurs="0">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:sequence>
+						<xs:element name="elementA" type="Basic" />
+					</xs:sequence>
+					<xs:element name="elementB" type="MySimpleType" />
+				</xs:choice>
+			</xs:sequence>
+			<xs:choice>
+				<xs:element name="elementC" type="xs:string" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle8">
+		<xs:annotation>
+			<xs:documentation>Simple, followed by spurious containment
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="A" type="xs:string" />
+			<xs:element name="B" type="xs:string" />
+			<xs:element name="C" type="xs:string" />
+			<xs:sequence minOccurs="0">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:sequence>
+						<xs:element name="elementA" type="Basic" />
+					</xs:sequence>
+					<xs:element name="elementB" type="MySimpleType" />
+				</xs:choice>
+			</xs:sequence>
+			<xs:choice>
+				<xs:element name="elementC" type="xs:string" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle9">
+		<xs:annotation>
+			<xs:documentation>Repeating choice, references global
+				element</xs:documentation>
+		</xs:annotation>
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="element" />
+			<xs:element name="b" type="xs:string" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle10">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="y" type="xs:string" />
+			<xs:sequence>
+				<xs:element name="x" type="xs:string" />
+				<xs:choice>
+					<xs:group ref="Group1" />
+					<xs:group ref="Group2" />
+				</xs:choice>
+			</xs:sequence>
+			<xs:element name="test" type="xs:string" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="RepeatingParticle11">
+		<xs:choice maxOccurs="unbounded">
+			<xs:sequence>
+				<xs:element name="x" type="xs:string" />
+				<xs:choice>
+					<xs:group ref="Group1" />
+					<xs:group ref="Group2" />
+				</xs:choice>
+			</xs:sequence>
+			<xs:element name="test" type="xs:string" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="element" type="xs:string" />
+	<xs:group name="Group1">
+		<xs:sequence>
+			<xs:element name="elementA" type="xs:string" />
+			<xs:element name="elementB" type="xs:string" />
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="Group2">
+		<xs:sequence>
+			<xs:element name="elementC" type="xs:string" />
+			<xs:element name="elementD" type="xs:string" />
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="DuplicateElementsDifferentNamespaces1">
+		<xs:sequence>
+			<xs:element name="element1" type="xs:string" />
+			<xs:element ref="mtz1:element1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DuplicateElementsDifferentNamespaces2">
+		<xs:sequence>
+			<xs:element ref="mtz1:element1" />
+			<xs:element name="element1" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DuplicateElementsDifferentNamespaces3">
+		<xs:sequence>
+			<xs:element ref="mtz1:element1" />
+			<xs:element ref="mtz2:element1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RepeatingSequenceWithModelGroupReference">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:group ref="Group3" />
+		</xs:sequence>
+	</xs:complexType>	
+	<xs:group name="Group3">
+		<xs:choice>
+			<xs:element name="element1" type="xs:string"/>
+			<xs:element name="element2" type="xs:string"/>			
+		</xs:choice>
+	</xs:group>
+</xs:schema>

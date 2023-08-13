@@ -1,0 +1,272 @@
+-- Test for model reference resolution
+--
+-- n.b. rules make no sense
+
+Model "../basicmodel.uml2"
+Model "../FpML.uml2"
+
+Operators "test1"
+Operators "C:/test2"
+
+"variableA" is 0
+"mydate" represents '2005-12-30'
+
+Context: Trade
+Validation Rule "expr-1"
+tradeDate is before '2005-12-30'
+
+Context: IRSwap
+Validation Rule "expr-2"
+If a tradeheader is present then tradeDate is before '2005-12-30'
+
+Context: IRSwap
+Validation Rule "iteration"
+one of the legs has fixFloat = FixFloatEnum.FIXED
+
+Context: IRSwap
+Validation rule "iteration-2"
+each of the legs has fixFloat = FixFloatEnum.FIXED
+
+Context: IRSwap
+Validation rule "iteration-3"
+for each "x" in the collection of legs, x.fixFloat = FixFloatEnum.FIXED
+
+Context: Trade
+Validation Rule "self-reference"
+The Trade has tradeDate before '2005-12-30'
+
+-- nonsense rule - but checks that the Trade attribute is accessible
+Context: IRSwap
+Validation Rule "context-reference"
+each of the legs has IRSwap.tradeDate = '2005-12-30'
+
+Context: IRSwap
+Validation Rule "var"
+"test" represents tradeheader, 
+test.masterAgreement = 'foo'
+
+Context: IRSwap
+Validation Rule "var-2"
+"test" represent tradeDate + 2
+test is before '2005-12-30'
+
+Context: IRSwap
+Validation Rule "var-3"
+"test" is a TradeHeader,
+test.masterAgreement is present
+
+
+Context: Trade
+Validation Rule "steps"
+tradeheader.masterAgreement = 'boo'
+
+Context: BasicModel::Main::Trade
+Validation Rule "qualified-1"
+tradeDate = '2005-12-30'
+
+-- tradeDate in the rule is an attribute of IRSwap
+Context: IRSwap
+Validation Rule "context-1"
+one of the legs has (tradeDate = '2005-12-30')
+
+Context: IRSwap
+Validation Rule "uniqueby-1"
+number of unique legs (by fixFloat) = 2
+
+Context: IRSwap
+Validation Rule "global-var"
+tradeDate is before mydate
+ 
+Context: Secondary
+Validation Rule "second-model"
+attr = 'test'
+
+Context: IRSwap
+Validation Rule "global-exists-1"
+There is a Trade
+
+Context: IRSwap
+Validation Rule "global-exists-2"
+There is a Trade (the "trade") where trade.tradeDate is equal to '2005-12-30'
+
+Context: IRSwap
+Validation Rule "global-exists-2b"
+If there is a Trade (the "trade") then trade.tradeDate is equal to '2005-12-30'
+
+Context: IRSwap
+Validation Rule "global-exists-3"
+There is a TradeHeader where the masterAgreement is equal to 'abc'
+
+Context: IRSwap
+Validation Rule "is-one-of-1"
+tradeheader.masterAgreement is one of FixFloatEnum.FIXED, 'FIXED', tradeDate
+
+Context: IRSwap ("swap")
+Validation Fragment "property-1"
+swap.tradeDate is before '2005-12-12'
+
+Context: Trade
+Validation Rule "cast-1"
+"test" represents the Trade as an IRSwap
+test.tradeDate is before '2005-12-12'
+
+Context: Trade
+Validation Rule "is-subtype-1"
+If the Trade is a kind of IRSwap then tradeDate is before '2005-12-12'
+
+Context: IRSwap
+Validation Rule "selection-1"
+"someLegs" are the legs where fixFloat = FixFloatEnum.FIXED
+The number of someLegs = 2
+
+Context: IRSwap
+Validation Rule "selection-2"
+"someLeg" is the first of the legs where fixFloat = FixFloatEnum.FIXED
+someLeg.fixFloat = FixFloatEnum.FIXED
+
+Context: Trade
+Validation Rule "report-1"
+tradeheader.masterAgreement = 'boo'
+Report: 'Master agreement is not boo but ' + tradeheader.masterAgreement,
+If tradeheader.masterAgreement = 'boo' then report the tradeDate else report the tradeheader.masterAgreement;
+
+Validation Rule "additionalparams-1" applies to a Trade and uses a String ("foo")
+tradeheader.masterAgreement = foo
+
+Validation Rule "additionalparams-2" applies to a Trade and uses a TradeHeader ("header"), IRSwap ("swap") 
+A header is present and swap.legs are present
+
+Context: Invalid
+Validation Rule "invalid-1"
+foo = 'bar'
+
+Context: IRSwap
+Validation Rule "invalid-2"
+each of the foos has fixFloat = FixFloatEnum.FIXED
+
+-- Invalid because context has to be an element
+Context: FixFloatEnum.FIXED
+Validation Rule "invalid-3"
+'a' = 'a'
+
+-- Invalid because context cannot be a simple type
+Context: Date
+Validation Rule "invalid-4"
+'a' = 'a'
+
+-- Invalid self-reference (IRSwap is not trade)
+Context: Trade
+Validation Rule "invalid-5"
+The IRSwap has tradeDate before '2005-12-30'
+
+-- Reference to non-static attribute
+Context: IRSwap
+Validation Rule "invalid-6"
+Trade.tradeDate is before '2005-12-30'
+
+-- Reference ambiguous (class exists in 2 packages)
+Context: Ambiguous
+Validation Rule "invalid-7"
+'a' = 'a'
+
+-- Inline reference ambiguous
+Context: IRSwap
+Validation Rule "invalid-8"
+Ambiguous.CONSTANT = '2005-12-13'
+
+-- tried to navigate from a complex expression assigned to a var
+Context: IRSwap
+Validation Rule "invalid-10"
+"test" represents tradeheader + 2
+test.masterAgreement = 'abc'
+
+-- resolver error with variable
+Context: IRSwap
+Validation Rule "invalid-11"
+"test" represents tradeheader test.foo = 'abc'
+ 
+-- invalid variable reference
+Context: IRSwap
+Validation Rule "invalid-12"
+"test" represents tradeheader unknown = 'abc'
+
+-- quantification over basic data type
+Context: IRSwap
+Validation Rule "invalid-13"
+one of the tradeDate has (one of the x has 'a' = 'a')
+
+-- duplicate var
+Context: IRSwap
+Validation Rule "invalid-14"
+"test" represents tradeheader,
+"test" represents tradeheader,
+test.masterAgreement = 'foo'
+
+-- Ambiguous references
+Context: IRSwap
+Validation Rule "invalid-15"
+"test" represents Ambiguous
+test.x=1
+
+-- Global exists on non-existent element
+Context: IRSwap
+Validation Rule "invalid-16"
+There is a Foo
+
+-- Global exists on attribute
+Context: IRSwap
+Validation Rule "invalid-17"
+There is a tradeDate
+
+-- Global exists with variable tried relative resolution
+Context: IRSwap
+Validation Rule "invalid-18"
+There is a TradeHeader ("header") where masterAgreement = 'abc'
+
+-- invalid: property must use variable-relative syntax
+Context: IRSwap ("test")
+Validation Fragment "invalid-19"
+tradeDate is not present
+
+-- invalid: duplicate variable
+Context: IRSwap ("test"), IRSwap ("test")
+Validation Fragment "invalid-20"
+test.tradeDate is not present
+
+-- invalid: fixFloat not in context
+Context: IRSwap
+Validation rule "invalid-21"
+for each "x" in the collection of legs, fixFloat = FixFloatEnum.FIXED
+
+-- invalid: x no longer in contex
+Context: IRSwap
+Validation rule "invalid-22"
+for each "x" in the collection of legs (x.fixFloat = FixFloatEnum.FIXED) and
+x.fixFloat = FixFloatEnum.FIXED
+
+-- invalid: unknown type on parameter
+Validation Rule "invalid-23" applies to a Trade and uses INVALID ("foo")
+tradeheader.masterAgreement = foo
+
+-- invalid: parameter name masks an attribute in the rule context
+Validation Rule "invalid-24" applies to a Trade and uses a String ("tradeheader")
+tradeheader is present
+ 
+-- invalid: parameter name masks a global type
+Validation Rule "invalid-25" applies to a Trade and uses a String ("IRSwap")
+IRSwap is present
+
+-- invalid: variable name masks a global type
+Context: IRSwap
+Validation Rule "invalid-26"
+"IRSwap" is 'three', IRSwap is present
+
+-- invalid: variable name masks an NRL primitive type
+Context: IRSwap
+Validation Rule "invalid-27"
+"Date" is 'three', Date is present
+
+-- invalid: accessing an enum facet of an element which is an enum value, not the type itself
+Context: IRLeg
+Validation Rule "invalid-28"
+fixFloat is equal to fixFloat.FIXED

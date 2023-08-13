@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nrlparser.xsd">
+	<operator>
+		<name>a trade</name>
+		<completionLevel>DefinedParameterTypes</completionLevel>
+		<returnType>
+			<type>BasicModel::Main::Trade</type>
+		</returnType>
+	</operator>
+	<operator>
+		<name>a string</name>
+		<completionLevel>DefinedParameterTypes</completionLevel>
+		<returnType>
+			<type>string</type>
+		</returnType>
+	</operator>
+	<operator>
+		<name>pass a trade</name>
+		<parameters>
+			<parameter>
+				<name>trade</name>
+				<type>BasicModel::Main::Trade</type>
+			</parameter>
+		</parameters>
+		<returnType>
+			<type>boolean</type>
+		</returnType>
+	</operator>
+	<operator>
+		<name>pass an integer</name>
+		<parameters>
+			<parameter>
+				<name>int</name>
+				<type>Integer</type>
+			</parameter>
+		</parameters>
+		<returnType>
+			<type>boolean</type>
+		</returnType>
+	</operator>
+	<operator>
+		<name>pass a list of legs</name>
+		<parameters>
+			<parameter>
+				<name>legs</name>
+				<type>BasicModel::Main::IR:IRLeg</type>
+				<isCollection>true</isCollection>
+			</parameter>
+		</parameters>
+		<returnType>
+			<type>boolean</type>
+		</returnType>
+	</operator>
+	<operator>
+		<name>void</name>
+		<completionLevel>DefinedParameterTypes</completionLevel>
+		<returnType>
+			<type>void</type>
+		</returnType>
+	</operator>
+</operators>

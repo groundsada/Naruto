@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Basic_0="http:///Basic_0.profile.uml2" xmlns:XMLSchema_0="http:///XMLSchema_0_ysgYgEtXEdqCydWod9T-cg.profile.uml2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xsi:schemaLocation="http:///Basic_0.profile.uml2 pathmap://UML_PROFILES/Standard.profile.uml#__LeIQK86Edih9-GG5afQ0g http:///XMLSchema_0_ysgYgEtXEdqCydWod9T-cg.profile.uml2 pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ytRNhEtXEdqCydWod9T-cg">
+  <uml:Model xmi:id="_3RzIoEtXEdqhPYJq3sEkGA" name="XSDDataTypes">
+    <packagedElement xmi:type="uml:Package" xmi:id="_3RzIqUtXEdqhPYJq3sEkGA" name="XMLSchema">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzIrEtXEdqhPYJq3sEkGA" name="anySimpleType">
+        <generalization xmi:id="_3RzIr0tXEdqhPYJq3sEkGA" general="_3RzIsEtXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzIsEtXEdqhPYJq3sEkGA" name="anyType"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzIs0tXEdqhPYJq3sEkGA" name="anyURI">
+        <generalization xmi:id="_3RzItktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzIt0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzIuktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzIu0tXEdqhPYJq3sEkGA" name="base64Binary">
+        <generalization xmi:id="_3RzIvktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzIv0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzIwktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzIw0tXEdqhPYJq3sEkGA" name="boolean">
+        <generalization xmi:id="_3RzIxktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzIx0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzIyktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzIy0tXEdqhPYJq3sEkGA" name="byte">
+        <generalization xmi:id="_3RzIzktXEdqhPYJq3sEkGA" general="_3RzI10tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzIz0tXEdqhPYJq3sEkGA" name="minInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI0ktXEdqhPYJq3sEkGA" value="-128"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzI00tXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI1ktXEdqhPYJq3sEkGA" value="127"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzI10tXEdqhPYJq3sEkGA" name="short">
+        <generalization xmi:id="_3RzI2ktXEdqhPYJq3sEkGA" general="_3RzI40tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzI20tXEdqhPYJq3sEkGA" name="minInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI3ktXEdqhPYJq3sEkGA" value="-32768"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzI30tXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI4ktXEdqhPYJq3sEkGA" value="32767"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzI40tXEdqhPYJq3sEkGA" name="int">
+        <generalization xmi:id="_3RzI5ktXEdqhPYJq3sEkGA" general="_3RzI70tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzI50tXEdqhPYJq3sEkGA" name="minInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI6ktXEdqhPYJq3sEkGA" value="-2147483648"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzI60tXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI7ktXEdqhPYJq3sEkGA" value="2147483647"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzI70tXEdqhPYJq3sEkGA" name="long">
+        <generalization xmi:id="_3RzI8ktXEdqhPYJq3sEkGA" general="_3RzI-0tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzI80tXEdqhPYJq3sEkGA" name="minInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI9ktXEdqhPYJq3sEkGA" value="-9223372036854775808"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzI90tXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzI-ktXEdqhPYJq3sEkGA" value="9223372036854775807"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzI-0tXEdqhPYJq3sEkGA" name="integer">
+        <generalization xmi:id="_3RzI_ktXEdqhPYJq3sEkGA" general="_3RzJB0tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzI_0tXEdqhPYJq3sEkGA" name="fractionDigits">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJAktXEdqhPYJq3sEkGA" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzJA0tXEdqhPYJq3sEkGA" name="pattern">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJBktXEdqhPYJq3sEkGA" value="[\-+]?[0-9]+"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJB0tXEdqhPYJq3sEkGA" name="decimal">
+        <generalization xmi:id="_3RzJCktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJC0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJDktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJD0tXEdqhPYJq3sEkGA" name="date">
+        <generalization xmi:id="_3RzJEktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJE0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJFktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJF0tXEdqhPYJq3sEkGA" name="dateTime">
+        <generalization xmi:id="_3RzJGktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJG0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJHktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJH0tXEdqhPYJq3sEkGA" name="double">
+        <generalization xmi:id="_3RzJIktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJI0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJJktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJJ0tXEdqhPYJq3sEkGA" name="duration">
+        <generalization xmi:id="_3RzJKktXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJK0tXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJLktXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJL0tXEdqhPYJq3sEkGA" name="ENTITY">
+        <generalization xmi:id="_3RzJMktXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJM0tXEdqhPYJq3sEkGA" name="NCName">
+        <generalization xmi:id="_3RzJNktXEdqhPYJq3sEkGA" general="_3RzJPktXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJN0tXEdqhPYJq3sEkGA" name="pattern">
+          <ownedComment xmi:id="_3RzJOktXEdqhPYJq3sEkGA">
+            <body>pattern matches production 4 from the Namespaces in XML spec</body>
+          </ownedComment>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJPUtXEdqhPYJq3sEkGA" value="[\i-[:]][\c-[:]]*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJPktXEdqhPYJq3sEkGA" name="Name">
+        <generalization xmi:id="_3RzJQUtXEdqhPYJq3sEkGA" general="_3RzJSUtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJQktXEdqhPYJq3sEkGA" name="pattern">
+          <ownedComment xmi:id="_3RzJRUtXEdqhPYJq3sEkGA">
+            <body>pattern matches production 5 from the XML spec</body>
+          </ownedComment>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJSEtXEdqhPYJq3sEkGA" value="\i\c*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJSUtXEdqhPYJq3sEkGA" name="token">
+        <generalization xmi:id="_3RzJTEtXEdqhPYJq3sEkGA" general="_3RzJUUtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJTUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJUEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJUUtXEdqhPYJq3sEkGA" name="normalizedString">
+        <generalization xmi:id="_3RzJVEtXEdqhPYJq3sEkGA" general="_3RzJWUtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJVUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJWEtXEdqhPYJq3sEkGA" value="replace"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJWUtXEdqhPYJq3sEkGA" name="string">
+        <generalization xmi:id="_3RzJXEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJXUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJYEtXEdqhPYJq3sEkGA" value="preserve"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJYUtXEdqhPYJq3sEkGA" name="ENTITIES">
+        <ownedAttribute xmi:id="_3RzJZEtXEdqhPYJq3sEkGA" name="itemType" type="_3RzJL0tXEdqhPYJq3sEkGA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzJZ0tXEdqhPYJq3sEkGA" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzJaEtXEdqhPYJq3sEkGA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzJaUtXEdqhPYJq3sEkGA" name="minLength">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJbEtXEdqhPYJq3sEkGA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJbUtXEdqhPYJq3sEkGA" name="float">
+        <generalization xmi:id="_3RzJcEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJcUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJdEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJdUtXEdqhPYJq3sEkGA" name="gDay">
+        <generalization xmi:id="_3RzJeEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJeUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJfEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJfUtXEdqhPYJq3sEkGA" name="gMonth">
+        <generalization xmi:id="_3RzJgEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJgUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJhEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJhUtXEdqhPYJq3sEkGA" name="gMonthDay">
+        <generalization xmi:id="_3RzJiEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJiUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJjEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJjUtXEdqhPYJq3sEkGA" name="gYearMonth">
+        <generalization xmi:id="_3RzJkEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJkUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJlEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJlUtXEdqhPYJq3sEkGA" name="gYear">
+        <generalization xmi:id="_3RzJmEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJmUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJnEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJnUtXEdqhPYJq3sEkGA" name="hexBinary">
+        <generalization xmi:id="_3RzJoEtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJoUtXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJpEtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJpUtXEdqhPYJq3sEkGA" name="ID">
+        <generalization xmi:id="_3RzJqEtXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJqUtXEdqhPYJq3sEkGA" name="IDREF">
+        <generalization xmi:id="_3RzJrEtXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJrUtXEdqhPYJq3sEkGA" name="IDREFS">
+        <ownedAttribute xmi:id="_3RzJsEtXEdqhPYJq3sEkGA" name="itemType" type="_3RzJqUtXEdqhPYJq3sEkGA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzJs0tXEdqhPYJq3sEkGA" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzJtEtXEdqhPYJq3sEkGA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzJtUtXEdqhPYJq3sEkGA" name="minLength">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJuEtXEdqhPYJq3sEkGA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJuUtXEdqhPYJq3sEkGA" name="language">
+        <generalization xmi:id="_3RzJvEtXEdqhPYJq3sEkGA" general="_3RzJSUtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJvUtXEdqhPYJq3sEkGA" name="pattern">
+          <ownedComment xmi:id="_3RzJwEtXEdqhPYJq3sEkGA">
+            <body>pattern specifies the content of section 2.12 of XML 1.0e2
+            and RFC 3066 (Revised version of RFC 1766).</body>
+          </ownedComment>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJw0tXEdqhPYJq3sEkGA" value="[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJxEtXEdqhPYJq3sEkGA" name="negativeInteger">
+        <generalization xmi:id="_3RzJx0tXEdqhPYJq3sEkGA" general="_3RzJzEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJyEtXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJy0tXEdqhPYJq3sEkGA" value="-1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJzEtXEdqhPYJq3sEkGA" name="nonPositiveInteger">
+        <generalization xmi:id="_3RzJz0tXEdqhPYJq3sEkGA" general="_3RzI-0tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJ0EtXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ00tXEdqhPYJq3sEkGA" value="0"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJ1EtXEdqhPYJq3sEkGA" name="NMTOKEN">
+        <generalization xmi:id="_3RzJ10tXEdqhPYJq3sEkGA" general="_3RzJSUtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJ2EtXEdqhPYJq3sEkGA" name="pattern">
+          <ownedComment xmi:id="_3RzJ20tXEdqhPYJq3sEkGA">
+            <body>pattern matches production 7 from the XML spec</body>
+          </ownedComment>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ3ktXEdqhPYJq3sEkGA" value="\c+"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJ30tXEdqhPYJq3sEkGA" name="NMTOKENS">
+        <ownedAttribute xmi:id="_3RzJ4ktXEdqhPYJq3sEkGA" name="itemType" type="_3RzJ1EtXEdqhPYJq3sEkGA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzJ5UtXEdqhPYJq3sEkGA" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzJ5ktXEdqhPYJq3sEkGA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzJ50tXEdqhPYJq3sEkGA" name="minLength">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ6ktXEdqhPYJq3sEkGA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJ60tXEdqhPYJq3sEkGA" name="nonNegativeInteger">
+        <generalization xmi:id="_3RzJ7ktXEdqhPYJq3sEkGA" general="_3RzI-0tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJ70tXEdqhPYJq3sEkGA" name="minInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ8ktXEdqhPYJq3sEkGA" value="0"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJ80tXEdqhPYJq3sEkGA" name="NOTATION">
+        <ownedComment xmi:id="_3RzJ9ktXEdqhPYJq3sEkGA">
+          <body>NOTATION cannot be used directly in a schema; rather a type
+        must be derived from it by specifying at least one enumeration
+        facet whose value is the name of a NOTATION declared in the
+        schema.</body>
+        </ownedComment>
+        <generalization xmi:id="_3RzJ-UtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzJ-ktXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzJ_UtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzJ_ktXEdqhPYJq3sEkGA" name="positiveInteger">
+        <generalization xmi:id="_3RzKAUtXEdqhPYJq3sEkGA" general="_3RzJ60tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzKAktXEdqhPYJq3sEkGA" name="minInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKBUtXEdqhPYJq3sEkGA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzKBktXEdqhPYJq3sEkGA" name="QName">
+        <generalization xmi:id="_3RzKCUtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzKCktXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKDUtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzKDktXEdqhPYJq3sEkGA" name="time">
+        <generalization xmi:id="_3RzKEUtXEdqhPYJq3sEkGA" general="_3RzIrEtXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzKEktXEdqhPYJq3sEkGA" name="whiteSpace">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKFUtXEdqhPYJq3sEkGA" value="collapse"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzKFktXEdqhPYJq3sEkGA" name="unsignedByte">
+        <generalization xmi:id="_3RzKGUtXEdqhPYJq3sEkGA" general="_3RzKHktXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzKGktXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKHUtXEdqhPYJq3sEkGA" value="255"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzKHktXEdqhPYJq3sEkGA" name="unsignedShort">
+        <generalization xmi:id="_3RzKIUtXEdqhPYJq3sEkGA" general="_3RzKJktXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzKIktXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKJUtXEdqhPYJq3sEkGA" value="65535"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzKJktXEdqhPYJq3sEkGA" name="unsignedInt">
+        <generalization xmi:id="_3RzKKUtXEdqhPYJq3sEkGA" general="_3RzKLktXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzKKktXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKLUtXEdqhPYJq3sEkGA" value="4294967295"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3RzKLktXEdqhPYJq3sEkGA" name="unsignedLong">
+        <generalization xmi:id="_3RzKMUtXEdqhPYJq3sEkGA" general="_3RzJ60tXEdqhPYJq3sEkGA"/>
+        <ownedAttribute xmi:id="_3RzKMktXEdqhPYJq3sEkGA" name="maxInclusive">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_3RzKNUtXEdqhPYJq3sEkGA" value="18446744073709551615"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3RzKNktXEdqhPYJq3sEkGA" name="xml">
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKOUtXEdqhPYJq3sEkGA" name="specialAttrs">
+        <ownedAttribute xmi:id="_3RzKPEtXEdqhPYJq3sEkGA" name="base" type="_3RzIs0tXEdqhPYJq3sEkGA">
+          <ownedComment xmi:id="_3RzKP0tXEdqhPYJq3sEkGA">
+            <body>See http://www.w3.org/TR/xmlbase/ for
+                     information about this attribute.</body>
+          </ownedComment>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKQktXEdqhPYJq3sEkGA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKQ0tXEdqhPYJq3sEkGA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzKREtXEdqhPYJq3sEkGA" name="lang" type="_3RzJuUtXEdqhPYJq3sEkGA">
+          <ownedComment xmi:id="_3RzKR0tXEdqhPYJq3sEkGA">
+            <body>Attempting to install the relevant ISO 2- and 3-letter
+         codes as the enumerated possible values is probably never
+         going to be a realistic possibility.  See
+         RFC 3066 at http://www.ietf.org/rfc/rfc3066.txt and the IANA registry
+         at http://www.iana.org/assignments/lang-tag-apps.htm for
+         further information.</body>
+          </ownedComment>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKSktXEdqhPYJq3sEkGA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKS0tXEdqhPYJq3sEkGA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_3RzKTEtXEdqhPYJq3sEkGA" name="space" type="_3RzKUUtXEdqhPYJq3sEkGA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKT0tXEdqhPYJq3sEkGA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKUEtXEdqhPYJq3sEkGA"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_3RzKUUtXEdqhPYJq3sEkGA" name="space" visibility="private">
+        <generalization xmi:id="_3RzKVEtXEdqhPYJq3sEkGA" general="_3RzJM0tXEdqhPYJq3sEkGA"/>
+        <ownedLiteral xmi:id="_3RzKVUtXEdqhPYJq3sEkGA" name="default"/>
+        <ownedLiteral xmi:id="_3RzKVktXEdqhPYJq3sEkGA" name="preserve"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKV0tXEdqhPYJq3sEkGA" name="base">
+        <ownedAttribute xmi:id="_3RzKWktXEdqhPYJq3sEkGA" name="base" type="_3RzIs0tXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKXUtXEdqhPYJq3sEkGA" name="id">
+        <ownedAttribute xmi:id="_3RzKYEtXEdqhPYJq3sEkGA" name="id" type="_3RzJpUtXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKY0tXEdqhPYJq3sEkGA" name="lang">
+        <ownedAttribute xmi:id="_3RzKZktXEdqhPYJq3sEkGA" name="lang" type="_3RzJuUtXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKaUtXEdqhPYJq3sEkGA" name="space">
+        <ownedAttribute xmi:id="_3RzKbEtXEdqhPYJq3sEkGA" name="space" type="_3RzKUUtXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3RzKb0tXEdqhPYJq3sEkGA" name="XMLSchema-instance">
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKcktXEdqhPYJq3sEkGA" name="nil">
+        <ownedAttribute xmi:id="_3RzKdUtXEdqhPYJq3sEkGA" name="nil" type="_3RzIw0tXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKeEtXEdqhPYJq3sEkGA" name="noNamespaceSchemaLocation">
+        <ownedAttribute xmi:id="_3RzKe0tXEdqhPYJq3sEkGA" name="noNamespaceSchemaLocation" type="_3RzIs0tXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKfktXEdqhPYJq3sEkGA" name="schemaLocation">
+        <ownedAttribute xmi:id="_3RzKgUtXEdqhPYJq3sEkGA" name="schemaLocation" type="_3RzKhEtXEdqhPYJq3sEkGA"/>
+        <nestedClassifier xmi:type="uml:DataType" xmi:id="_3RzKhEtXEdqhPYJq3sEkGA" name="schemaLocation" visibility="private">
+          <ownedAttribute xmi:id="_3RzKh0tXEdqhPYJq3sEkGA" name="itemType" type="_3RzIs0tXEdqhPYJq3sEkGA" aggregation="composite">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3RzKiktXEdqhPYJq3sEkGA" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3RzKi0tXEdqhPYJq3sEkGA"/>
+          </ownedAttribute>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3RzKjEtXEdqhPYJq3sEkGA" name="type">
+        <ownedAttribute xmi:id="_3RzKj0tXEdqhPYJq3sEkGA" name="type" type="_3RzKBktXEdqhPYJq3sEkGA"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_3RzIo0tXEdqhPYJq3sEkGA">
+      <eAnnotations xmi:id="_3RzIpEtXEdqhPYJq3sEkGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#__LeIQK86Edih9-GG5afQ0g"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_3RzIpktXEdqhPYJq3sEkGA">
+      <eAnnotations xmi:id="_3RzIp0tXEdqhPYJq3sEkGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ytRNhEtXEdqCydWod9T-cg"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://XMLmodeling_PROFILES/XMLSchema.profile.uml#_ytRNgEtXEdqCydWod9T-cg"/>
+    </profileApplication>
+  </uml:Model>
+  <Basic_0:Basic__ModelLibrary xmi:id="_3RzIoktXEdqhPYJq3sEkGA" base_Package="_3RzIoEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Schema xmi:id="_3RzIq0tXEdqhPYJq3sEkGA" sourceURI="file:/C:/EclipseWorkspaces-3.1/hyperModel_2.0/org.eclipse.xsd/cache/www.w3.org/2001/XMLSchema.xsd" base_Package="_3RzIqUtXEdqhPYJq3sEkGA" targetNamespace="http://www.w3.org/2001/XMLSchema" targetNamespacePrefix="xs"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzIrktXEdqhPYJq3sEkGA" id="anySimpleType" sourceURI="MagicXMLSchema.xsd#//anySimpleType;XSDSimpleTypeDefinition=1" base_DataType="_3RzIrEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzIsktXEdqhPYJq3sEkGA" id="anyType" sourceURI="MagicXMLSchema.xsd#//anyType;XSDSimpleTypeDefinition" base_DataType="_3RzIsEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzItUtXEdqhPYJq3sEkGA" id="anyURI" sourceURI="XMLSchema.xsd#//anyURI;XSDSimpleTypeDefinition=23" base_DataType="_3RzIs0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzIuUtXEdqhPYJq3sEkGA" id="anyURI.whiteSpace" base_Property="_3RzIt0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzIvUtXEdqhPYJq3sEkGA" id="base64Binary" sourceURI="XMLSchema.xsd#//base64Binary;XSDSimpleTypeDefinition=22" base_DataType="_3RzIu0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzIwUtXEdqhPYJq3sEkGA" id="base64Binary.whiteSpace" base_Property="_3RzIv0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzIxUtXEdqhPYJq3sEkGA" id="boolean" sourceURI="XMLSchema.xsd#//boolean;XSDSimpleTypeDefinition=8" base_DataType="_3RzIw0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzIyUtXEdqhPYJq3sEkGA" id="boolean.whiteSpace" base_Property="_3RzIx0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzIzUtXEdqhPYJq3sEkGA" id="byte" sourceURI="XMLSchema.xsd#//byte;XSDSimpleTypeDefinition=44" base_DataType="_3RzIy0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI0UtXEdqhPYJq3sEkGA" id="byte.minInclusive" base_Property="_3RzIz0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI1UtXEdqhPYJq3sEkGA" id="byte.maxInclusive" base_Property="_3RzI00tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzI2UtXEdqhPYJq3sEkGA" id="short" sourceURI="XMLSchema.xsd#//short;XSDSimpleTypeDefinition=43" base_DataType="_3RzI10tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI3UtXEdqhPYJq3sEkGA" id="short.minInclusive" base_Property="_3RzI20tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI4UtXEdqhPYJq3sEkGA" id="short.maxInclusive" base_Property="_3RzI30tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzI5UtXEdqhPYJq3sEkGA" id="int" sourceURI="XMLSchema.xsd#//int;XSDSimpleTypeDefinition=42" base_DataType="_3RzI40tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI6UtXEdqhPYJq3sEkGA" id="int.minInclusive" base_Property="_3RzI50tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI7UtXEdqhPYJq3sEkGA" id="int.maxInclusive" base_Property="_3RzI60tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzI8UtXEdqhPYJq3sEkGA" id="long" sourceURI="XMLSchema.xsd#//long;XSDSimpleTypeDefinition=41" base_DataType="_3RzI70tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI9UtXEdqhPYJq3sEkGA" id="long.minInclusive" base_Property="_3RzI80tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzI-UtXEdqhPYJq3sEkGA" id="long.maxInclusive" base_Property="_3RzI90tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzI_UtXEdqhPYJq3sEkGA" id="integer" sourceURI="XMLSchema.xsd#//integer;XSDSimpleTypeDefinition=38" base_DataType="_3RzI-0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJAUtXEdqhPYJq3sEkGA" id="integer.fractionDigits" base_Property="_3RzI_0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJBUtXEdqhPYJq3sEkGA" base_Property="_3RzJA0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJCUtXEdqhPYJq3sEkGA" id="decimal" sourceURI="XMLSchema.xsd#//decimal;XSDSimpleTypeDefinition=11" base_DataType="_3RzJB0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJDUtXEdqhPYJq3sEkGA" id="decimal.whiteSpace" base_Property="_3RzJC0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJEUtXEdqhPYJq3sEkGA" id="date" sourceURI="XMLSchema.xsd#//date;XSDSimpleTypeDefinition=15" base_DataType="_3RzJD0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJFUtXEdqhPYJq3sEkGA" id="date.whiteSpace" base_Property="_3RzJE0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJGUtXEdqhPYJq3sEkGA" id="dateTime" sourceURI="XMLSchema.xsd#//dateTime;XSDSimpleTypeDefinition=13" base_DataType="_3RzJF0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJHUtXEdqhPYJq3sEkGA" id="dateTime.whiteSpace" base_Property="_3RzJG0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJIUtXEdqhPYJq3sEkGA" id="double" sourceURI="XMLSchema.xsd#//double;XSDSimpleTypeDefinition=10" base_DataType="_3RzJH0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJJUtXEdqhPYJq3sEkGA" id="double.whiteSpace" base_Property="_3RzJI0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJKUtXEdqhPYJq3sEkGA" id="duration" sourceURI="XMLSchema.xsd#//duration;XSDSimpleTypeDefinition=12" base_DataType="_3RzJJ0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJLUtXEdqhPYJq3sEkGA" id="duration.whiteSpace" base_Property="_3RzJK0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJMUtXEdqhPYJq3sEkGA" id="ENTITY" sourceURI="XMLSchema.xsd#//ENTITY;XSDSimpleTypeDefinition=37" base_DataType="_3RzJL0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJNUtXEdqhPYJq3sEkGA" id="NCName" sourceURI="XMLSchema.xsd#//NCName;XSDSimpleTypeDefinition=34" base_DataType="_3RzJM0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJOUtXEdqhPYJq3sEkGA" id="NCName.pattern" base_Property="_3RzJN0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Documentation xmi:id="_3RzJPEtXEdqhPYJq3sEkGA" base_Comment="_3RzJOktXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml-names/#NT-NCName"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJQEtXEdqhPYJq3sEkGA" id="Name" sourceURI="XMLSchema.xsd#//Name;XSDSimpleTypeDefinition=33" base_DataType="_3RzJPktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJREtXEdqhPYJq3sEkGA" id="Name.pattern" base_Property="_3RzJQktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Documentation xmi:id="_3RzJR0tXEdqhPYJq3sEkGA" base_Comment="_3RzJRUtXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml#NT-Name"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJS0tXEdqhPYJq3sEkGA" id="token" sourceURI="XMLSchema.xsd#//token;XSDSimpleTypeDefinition=27" base_DataType="_3RzJSUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJT0tXEdqhPYJq3sEkGA" id="token.whiteSpace" base_Property="_3RzJTUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJU0tXEdqhPYJq3sEkGA" id="normalizedString" sourceURI="XMLSchema.xsd#//normalizedString;XSDSimpleTypeDefinition=26" base_DataType="_3RzJUUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJV0tXEdqhPYJq3sEkGA" id="normalizedString.whiteSpace" base_Property="_3RzJVUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJW0tXEdqhPYJq3sEkGA" id="string" sourceURI="XMLSchema.xsd#//string;XSDSimpleTypeDefinition=7" base_DataType="_3RzJWUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJX0tXEdqhPYJq3sEkGA" id="string.preserve" base_Property="_3RzJXUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__List xmi:id="_3RzJY0tXEdqhPYJq3sEkGA" id="ENTITIES" sourceURI="XMLSchema.xsd#//ENTITIES;XSDSimpleTypeDefinition=30" base_DataType="_3RzJYUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__ContentType xmi:id="_3RzJZktXEdqhPYJq3sEkGA" base_Property="_3RzJZEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJa0tXEdqhPYJq3sEkGA" id="ENTITIES.minLength" base_Property="_3RzJaUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJb0tXEdqhPYJq3sEkGA" id="float" sourceURI="XMLSchema.xsd#//float;XSDSimpleTypeDefinition=9" base_DataType="_3RzJbUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJc0tXEdqhPYJq3sEkGA" id="float.whiteSpace" base_Property="_3RzJcUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJd0tXEdqhPYJq3sEkGA" id="gDay" sourceURI="XMLSchema.xsd#//gDay;XSDSimpleTypeDefinition=19" base_DataType="_3RzJdUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJe0tXEdqhPYJq3sEkGA" id="gDay.whiteSpace" base_Property="_3RzJeUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJf0tXEdqhPYJq3sEkGA" id="gMonth" sourceURI="XMLSchema.xsd#//gMonth;XSDSimpleTypeDefinition=20" base_DataType="_3RzJfUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJg0tXEdqhPYJq3sEkGA" id="gMonth.whiteSpace" base_Property="_3RzJgUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJh0tXEdqhPYJq3sEkGA" id="gMonthDay" sourceURI="XMLSchema.xsd#//gMonthDay;XSDSimpleTypeDefinition=18" base_DataType="_3RzJhUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJi0tXEdqhPYJq3sEkGA" id="gMonthDay.whiteSpace" base_Property="_3RzJiUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJj0tXEdqhPYJq3sEkGA" id="gYearMonth" sourceURI="XMLSchema.xsd#//gYearMonth;XSDSimpleTypeDefinition=16" base_DataType="_3RzJjUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJk0tXEdqhPYJq3sEkGA" id="gYearMonth.whiteSpace" base_Property="_3RzJkUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJl0tXEdqhPYJq3sEkGA" id="gYear" sourceURI="XMLSchema.xsd#//gYear;XSDSimpleTypeDefinition=17" base_DataType="_3RzJlUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJm0tXEdqhPYJq3sEkGA" id="gYear.whiteSpace" base_Property="_3RzJmUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJn0tXEdqhPYJq3sEkGA" id="hexBinary" sourceURI="XMLSchema.xsd#//hexBinary;XSDSimpleTypeDefinition=21" base_DataType="_3RzJnUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJo0tXEdqhPYJq3sEkGA" id="hexBinary.whiteSpace" base_Property="_3RzJoUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJp0tXEdqhPYJq3sEkGA" id="ID" sourceURI="XMLSchema.xsd#//ID;XSDSimpleTypeDefinition=35" base_DataType="_3RzJpUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJq0tXEdqhPYJq3sEkGA" id="IDREF" sourceURI="XMLSchema.xsd#//IDREF;XSDSimpleTypeDefinition=36" base_DataType="_3RzJqUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__List xmi:id="_3RzJr0tXEdqhPYJq3sEkGA" id="IDREFS" sourceURI="XMLSchema.xsd#//IDREFS;XSDSimpleTypeDefinition=29" base_DataType="_3RzJrUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__ContentType xmi:id="_3RzJsktXEdqhPYJq3sEkGA" base_Property="_3RzJsEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJt0tXEdqhPYJq3sEkGA" id="IDREFS.minLength" base_Property="_3RzJtUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJu0tXEdqhPYJq3sEkGA" id="language" sourceURI="XMLSchema.xsd#//language;XSDSimpleTypeDefinition=28" base_DataType="_3RzJuUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJv0tXEdqhPYJq3sEkGA" id="language.pattern" base_Property="_3RzJvUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Documentation xmi:id="_3RzJwktXEdqhPYJq3sEkGA" base_Comment="_3RzJwEtXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml#NT-LanguageID"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJxktXEdqhPYJq3sEkGA" id="negativeInteger" sourceURI="XMLSchema.xsd#//negativeInteger;XSDSimpleTypeDefinition=40" base_DataType="_3RzJxEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJyktXEdqhPYJq3sEkGA" id="negativeInteger.maxInclusive" base_Property="_3RzJyEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJzktXEdqhPYJq3sEkGA" id="nonPositiveInteger" sourceURI="XMLSchema.xsd#//nonPositiveInteger;XSDSimpleTypeDefinition=39" base_DataType="_3RzJzEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJ0ktXEdqhPYJq3sEkGA" id="nonPositiveInteger.maxInclusive" base_Property="_3RzJ0EtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJ1ktXEdqhPYJq3sEkGA" id="NMTOKEN" sourceURI="XMLSchema.xsd#//NMTOKEN;XSDSimpleTypeDefinition=31" base_DataType="_3RzJ1EtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJ2ktXEdqhPYJq3sEkGA" id="NMTOKEN.pattern" base_Property="_3RzJ2EtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Documentation xmi:id="_3RzJ3UtXEdqhPYJq3sEkGA" base_Comment="_3RzJ20tXEdqhPYJq3sEkGA" source="http://www.w3.org/TR/REC-xml#NT-Nmtoken"/>
+  <XMLSchema_0:XMLSchema__List xmi:id="_3RzJ4UtXEdqhPYJq3sEkGA" id="NMTOKENS" sourceURI="XMLSchema.xsd#//NMTOKENS;XSDSimpleTypeDefinition=32" base_DataType="_3RzJ30tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__ContentType xmi:id="_3RzJ5EtXEdqhPYJq3sEkGA" base_Property="_3RzJ4ktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJ6UtXEdqhPYJq3sEkGA" id="NMTOKENS.minLength" base_Property="_3RzJ50tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJ7UtXEdqhPYJq3sEkGA" id="nonNegativeInteger" sourceURI="XMLSchema.xsd#//nonNegativeInteger;XSDSimpleTypeDefinition=45" base_DataType="_3RzJ60tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJ8UtXEdqhPYJq3sEkGA" id="nonNegativeInteger.minInclusive" base_Property="_3RzJ70tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzJ9UtXEdqhPYJq3sEkGA" id="NOTATION" sourceURI="XMLSchema.xsd#//NOTATION;XSDSimpleTypeDefinition=25" base_DataType="_3RzJ80tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Documentation xmi:id="_3RzJ-EtXEdqhPYJq3sEkGA" base_Comment="_3RzJ9ktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzJ_EtXEdqhPYJq3sEkGA" id="NOTATION.whiteSpace" base_Property="_3RzJ-ktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKAEtXEdqhPYJq3sEkGA" id="positiveInteger" sourceURI="XMLSchema.xsd#//positiveInteger;XSDSimpleTypeDefinition=50" base_DataType="_3RzJ_ktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzKBEtXEdqhPYJq3sEkGA" id="positiveInteger.minInclusive" base_Property="_3RzKAktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKCEtXEdqhPYJq3sEkGA" id="QName" sourceURI="XMLSchema.xsd#//QName;XSDSimpleTypeDefinition=24" base_DataType="_3RzKBktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzKDEtXEdqhPYJq3sEkGA" id="QName.whiteSpace" base_Property="_3RzKCktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKEEtXEdqhPYJq3sEkGA" id="time" sourceURI="XMLSchema.xsd#//time;XSDSimpleTypeDefinition=14" base_DataType="_3RzKDktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzKFEtXEdqhPYJq3sEkGA" id="time.whiteSpace" base_Property="_3RzKEktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKGEtXEdqhPYJq3sEkGA" id="unsignedByte" sourceURI="XMLSchema.xsd#//unsignedByte;XSDSimpleTypeDefinition=49" base_DataType="_3RzKFktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzKHEtXEdqhPYJq3sEkGA" id="unsignedByte.maxInclusive" base_Property="_3RzKGktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKIEtXEdqhPYJq3sEkGA" id="unsignedShort" sourceURI="XMLSchema.xsd#//unsignedShort;XSDSimpleTypeDefinition=48" base_DataType="_3RzKHktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzKJEtXEdqhPYJq3sEkGA" id="unsignedShort.maxInclusive" base_Property="_3RzKIktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKKEtXEdqhPYJq3sEkGA" id="unsignedInt" sourceURI="XMLSchema.xsd#//unsignedInt;XSDSimpleTypeDefinition=47" base_DataType="_3RzKJktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzKLEtXEdqhPYJq3sEkGA" id="unsignedInt.maxInclusive" base_Property="_3RzKKktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKMEtXEdqhPYJq3sEkGA" id="unsignedLong" sourceURI="XMLSchema.xsd#//unsignedLong;XSDSimpleTypeDefinition=46" base_DataType="_3RzKLktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Facet xmi:id="_3RzKNEtXEdqhPYJq3sEkGA" id="unsignedLong.maxInclusive" base_Property="_3RzKMktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Schema xmi:id="_3RzKOEtXEdqhPYJq3sEkGA" sourceURI="http://www.w3.org/2004/10/xml.xsd" base_Package="_3RzKNktXEdqhPYJq3sEkGA" targetNamespace="http://www.w3.org/XML/1998/namespace"/>
+  <XMLSchema_0:XMLSchema__AttributeGroup xmi:id="_3RzKO0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//specialAttrs;XSDAttributeGroupDefinition" base_Class="_3RzKOUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKPktXEdqhPYJq3sEkGA" base_Property="_3RzKPEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Documentation xmi:id="_3RzKQUtXEdqhPYJq3sEkGA" base_Comment="_3RzKP0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKRktXEdqhPYJq3sEkGA" base_Property="_3RzKREtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Documentation xmi:id="_3RzKSUtXEdqhPYJq3sEkGA" base_Comment="_3RzKR0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKTktXEdqhPYJq3sEkGA" base_Property="_3RzKTEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__SimpleType xmi:id="_3RzKU0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//space;XSDAttributeDeclaration=1/XSDSimpleTypeDefinition" base_DataType="_3RzKUUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKWUtXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//base;XSDAttributeDeclaration=2" base_Class="_3RzKV0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKXEtXEdqhPYJq3sEkGA" base_Property="_3RzKWktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKX0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//id;XSDAttributeDeclaration=3" base_Class="_3RzKXUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKYktXEdqhPYJq3sEkGA" base_Property="_3RzKYEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKZUtXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//lang;XSDAttributeDeclaration" base_Class="_3RzKY0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKaEtXEdqhPYJq3sEkGA" base_Property="_3RzKZktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKa0tXEdqhPYJq3sEkGA" sourceURI="xml.xsd#//space;XSDAttributeDeclaration=1" base_Class="_3RzKaUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKbktXEdqhPYJq3sEkGA" base_Property="_3RzKbEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Schema xmi:id="_3RzKcUtXEdqhPYJq3sEkGA" sourceURI="file:/C:/EclipseWorkspaces-3.1/hyperModel_2.0/org.eclipse.xsd/cache/www.w3.org/2001/XMLSchema-instance.xsd" base_Package="_3RzKb0tXEdqhPYJq3sEkGA" targetNamespace="http://www.w3.org/2001/XMLSchema-instance"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKdEtXEdqhPYJq3sEkGA" id="nil" sourceURI="XMLSchema-instance.xsd#//nil;XSDAttributeDeclaration=1" base_Class="_3RzKcktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKd0tXEdqhPYJq3sEkGA" base_Property="_3RzKdUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKektXEdqhPYJq3sEkGA" id="noNamespaceSchemaLocation" sourceURI="XMLSchema-instance.xsd#//noNamespaceSchemaLocation;XSDAttributeDeclaration=3" base_Class="_3RzKeEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKfUtXEdqhPYJq3sEkGA" base_Property="_3RzKe0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKgEtXEdqhPYJq3sEkGA" id="schemaLocation" sourceURI="XMLSchema-instance.xsd#//schemaLocation;XSDAttributeDeclaration=2" base_Class="_3RzKfktXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKg0tXEdqhPYJq3sEkGA" base_Property="_3RzKgUtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__List xmi:id="_3RzKhktXEdqhPYJq3sEkGA" sourceURI="XMLSchema-instance.xsd#//schemaLocation;XSDAttributeDeclaration=2/XSDSimpleTypeDefinition" base_DataType="_3RzKhEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__ContentType xmi:id="_3RzKiUtXEdqhPYJq3sEkGA" base_Property="_3RzKh0tXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__GlobalProperty xmi:id="_3RzKjktXEdqhPYJq3sEkGA" id="type" sourceURI="XMLSchema-instance.xsd#//type;XSDAttributeDeclaration" base_Class="_3RzKjEtXEdqhPYJq3sEkGA"/>
+  <XMLSchema_0:XMLSchema__Attribute xmi:id="_3RzKkUtXEdqhPYJq3sEkGA" base_Property="_3RzKj0tXEdqhPYJq3sEkGA"/>
+</xmi:XMI>

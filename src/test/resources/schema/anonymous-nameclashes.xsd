@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="anonymous-nameclashes-base.xsd"/>
+    <xs:complexType name="TypeNameA">
+        <xs:sequence>
+            <xs:element name="typeNameB">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="elementC" type="xs:string"/>
+                        <xs:element name="elementD" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TypeNameB">
+        <xs:sequence>
+            <xs:element name="elementA" type="xs:string"/>
+            <xs:element name="elementB" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TypeNameD">
+        <xs:sequence>
+            <xs:group ref="Group1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ElementName">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="typeName">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="elementE" type="xs:string"/>
+                            <xs:element name="elementF" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="Group1">
+        <xs:sequence>
+            <xs:element name="typeNameC">
+                <xs:complexType>
+                    <xs:attribute name="attr2" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

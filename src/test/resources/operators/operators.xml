@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nrlparser.xsd">
+	<operator>
+		<name>Operator one</name>
+		<documentation>Docs!</documentation>
+	    <example>a [Operator one] b</example>
+		<parameters>
+			<parameter>
+				<name>paramA</name>
+				<type>Decimal</type>
+				<implementationDetail>
+					<label>JAVA_CAST</label>
+					<value>(int)</value>
+				</implementationDetail>
+			</parameter>
+			<parameter>
+				<name>paramB</name>
+				<type>String</type>
+			</parameter>
+		</parameters>
+		<implementationDetail>
+			<label>JAVA_CLASS</label>
+			<value>OpClass</value>
+		</implementationDetail>
+		<implementationDetail>
+			<label>JAVA_METHOD</label>
+			<value>operatorOne</value>
+		</implementationDetail>
+	</operator>
+	<operator>
+		<name>Operator two</name>
+	</operator>
+</operators>

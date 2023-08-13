@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+/*
+ * The contents of this file are subject to the Mozilla Public License 
+ * Version 1.1 (the "License"); you may not use this file except in 
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS" 
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See 
+ * the License for the specific language governing rights and limitations 
+ * under the License.
+ * 
+ * The Original Code is the NRL Parser, released 28 April 2006, 
+ * Copyright (c) Christian Nentwich. The Initial Developer of the 
+ * Original Code is Christian Nentwich. Portions created by contributors 
+ * identified in the NOTICES file are Copyright (c) the contributors. 
+ * All Rights Reserved. 
+ -->
+<xs:schema xmlns="urn:net:sourceforge:nrl:1.5" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:net:sourceforge:nrl:1.5" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="ImplementationDetail">
+		<xs:annotation>
+			<xs:documentation>A generic tag/value type for adding implementation details (Java mappings, etc.) to both operators and their parameters</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="label">
+				<xs:annotation>
+					<xs:documentation>A token that identifies the type of implementation detail. This is mapping-specific. An example value might be JAVA_CLASS, to identify a java class identified with an operator - the actual class name would be the value.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="value" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The string value associated with the label.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Operator">
+		<xs:annotation>
+			<xs:documentation>Definition of an extension operator, at varying levels of detail (name only, or mapping to an implementation)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>The name of the operator is the only mandatory element. It defines the text that goes into square brackets in an NRL file, for example "send a message".</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="documentation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Textual documentation of the meaning of the operator.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purpose" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The purpose of defining this operator (e.g. reference data lookup, etc). The values are entirely implementation dependent.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parameters" type="Parameters" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The parameters the operator takes, if known.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="returnType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The return value type of the operator, if known.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="type" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>The type of the return value. This has to be a fully-qualified reference to a type in one of the models included at the top of the file. Alternatively, it can be one of the following built-in NRL types: string, int, integer, double, float, date, boolean, void.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="implementationDetail" type="ImplementationDetail" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The implementation specific mapping information for the operator, if any.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Operators">
+		<xs:annotation>
+			<xs:documentation>A collection of extension operators</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="documentation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Documentation describing this operator file, if any.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="model" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Relative or absolute file names of model files that specify the types in this operator file. If the operators have no types assigned yet, this is not necessary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="operator" type="Operator" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="version" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>File format version</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Parameter">
+		<xs:annotation>
+			<xs:documentation>Parameter of an extension operator</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>The minimum information for a parameter is a name.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The type of the parameter - optional. This has to be one of the "reserved" type names NRL makes available, or a fully-qualified type from a model. See "returnType" in "Operator" for more information - the "void" type must not be used here.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isCollection" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An indicator specifying whether the parameter is a collection or scalar value. Absence of the element is the same as specifying 'false'</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="implementationDetail" type="ImplementationDetail" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The implementation specific mapping information for the parameter, if any.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Parameters">
+		<xs:annotation>
+			<xs:documentation>Parameters for an extension operator</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="parameter" type="Parameter" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!---->
+	<xs:element name="operators" type="Operators">
+		<xs:annotation>
+			<xs:documentation>The root element of an operator definition file.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
