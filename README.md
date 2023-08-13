@@ -16,7 +16,7 @@ While the NRL originally provided support for Java mapping programs, NaRuTo expa
 
 ### Seamless Integration with CLiX and XML
 
-NaRuTo enhances the integration with [CLiX](http://www.clixml.org) and XML platforms. You can now write rules that directly manipulate XML data, opening up new possibilities for data transformation and manipulation.
+NaRuTo enhances the integration with CLiX and XML platforms. You can now write rules that directly manipulate XML data, opening up new possibilities for data transformation and manipulation.
 
 ### Enhanced API and Documentation
 
